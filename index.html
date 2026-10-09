@@ -123,7 +123,8 @@ section{position:relative}
 .hero__k::before{content:"";width:40px;height:1px;background:var(--gold)}
 .hero.shade::after{background:linear-gradient(90deg,rgba(4,37,44,.62) 0%,rgba(4,37,44,.38) 40%,rgba(4,37,44,0) 70%),linear-gradient(180deg,rgba(4,37,44,.5) 0%,rgba(4,37,44,.1) 25%,rgba(4,37,44,.25) 50%,rgba(4,37,44,.85) 100%)}
 .hero__c{z-index:2;text-shadow:0 2px 24px rgba(4,37,44,.45),0 1px 3px rgba(4,37,44,.35)}
-.hero h1{max-width:13ch;font-weight:400}
+.hero h1{max-width:13ch;font-weight:400;font-size:clamp(2.6rem,min(8.4vw,12.5svh),9rem)}
+.hero__c{padding-top:calc(96px + env(safe-area-inset-top,0px))}
 .hero__stats span{opacity:1}
 .hero__bar{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:clamp(28px,5vh,56px);border-top:1px solid rgba(255,255,255,.3);padding-top:22px}
 .hero__stats{display:flex;gap:clamp(22px,4vw,64px)}
