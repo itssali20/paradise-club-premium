@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Paradise Club</title>
-<meta name="description" content="Paradise Club Elite Vacations: the only vacation for singles in the world. 100 successful, charismatic men and 100 beautiful, fascinating women at a private luxury resort.">
+<meta name="description" content="Paradise Club Elite Vacations: the only vacation for singles in the world. 100 successful, charismatic men and 100 beautiful, fascinating women at the world's best resorts. Bikini contest, beauty pageant, pool parties and a $10,000 prize.">
 <meta property="og:title" content="Paradise Club · Elite Vacations">
 <meta property="og:description" content="The only vacation for singles in the world. Join us in Paradise.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1505142468610-359e7d316be0?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1593836788196-9fd68e904906?auto=format&fit=crop&w=1200&h=630&q=80">
 <meta name="theme-color" content="#04252c">
 <link rel="icon" href="https://static.wixstatic.com/media/8feb4d_45f0be61d005edb2ecb7ee8c2085ca7c.png/v1/fit/w_64,h_64,q_90/8feb4d_45f0be61d005edb2ecb7ee8c2085ca7c.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,7 +127,7 @@ section{position:relative}
 .hero__c{padding-top:calc(96px + env(safe-area-inset-top,0px))}
 .hero__stats span{opacity:1}
 .hero__bar{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:clamp(28px,5vh,56px);border-top:1px solid rgba(255,255,255,.3);padding-top:22px}
-.hero__stats{display:flex;gap:clamp(22px,4vw,64px)}
+.hero__stats{display:flex;flex-wrap:wrap;gap:18px clamp(22px,4vw,64px)}
 .hero__stats b{display:block;font:300 clamp(2rem,3.4vw,3rem)/1 var(--f-serif);font-variant-numeric:tabular-nums}
 .hero__stats span{font:400 .64rem/1.3 var(--f-sans);letter-spacing:.28em;text-transform:uppercase;opacity:.85}
 .scroll-cue{display:flex;align-items:center;gap:14px}
@@ -323,11 +323,12 @@ section{position:relative}
 .film-tabs{display:flex;gap:30px;margin-top:50px;border-bottom:1px solid rgba(255,255,255,.2)}
 .film-tabs button{padding:0 0 14px;font:400 .7rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:.55;border-bottom:1px solid transparent;margin-bottom:-1px;transition:opacity .4s}
 .film-tabs button[aria-selected="true"]{opacity:1;border-color:var(--gold)}
-.film-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.film-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
 .fthumb{position:relative;aspect-ratio:16/9;overflow:hidden;color:#fff;background:var(--lagoon)}
 .fthumb img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .fthumb.nf img{opacity:0}
 .fthumb:hover img{transform:scale(1.07)}
+.fthumb::before{content:"\25B6";position:absolute;right:14px;bottom:10px;z-index:2;font-size:.8rem;color:#fff;opacity:.85}
 .fthumb span{position:absolute;left:14px;bottom:12px;z-index:2;font:400 .6rem/1 var(--f-sans);letter-spacing:.26em;text-transform:uppercase}
 .fthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(4,37,44,.7))}
 @media (max-width:860px){.film-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.film-main{aspect-ratio:16/10}}
@@ -410,13 +411,14 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 
 <nav class="menu" id="menu" aria-label="Main">
   <div class="menu__links" id="menuLinks">
-    <a href="#experiences" data-img="1682687981907-170c006e3744"><small>01</small>Experiences</a>
-    <a href="#why" data-img="1776761420375-c50a5a3b2e0d"><small>02</small>Why Paradise</a>
-    <a href="#events" data-img="1767962270437-a906d15d98f5"><small>03</small>Events</a>
-    <a href="#invite" data-img="1507525428034-b723cf961d3e"><small>04</small>Gentlemen</a>
+    <a href="#prize" data-img="1696668827476-8c99c513805c"><small>00</small>Bikini Contest</a>
+    <a href="#experiences" data-img="1708246118417-86df0deb72dd"><small>01</small>Experiences</a>
+    <a href="#why" data-img="1749183563789-ae17d4a952d2"><small>02</small>Why Paradise</a>
+    <a href="#events" data-img="1593836788196-9fd68e904906"><small>03</small>Events</a>
+    <a href="#invite" data-img="1552600337-6f42e4fb2e78"><small>04</small>Gentlemen</a>
     <a href="#pageant" data-img="1554882195-8cf792f9a571"><small>05</small>Pageant</a>
     <a href="#destinations" data-img="1612698093158-e07ac200d44e"><small>06</small>Destinations</a>
-    <a href="#villa" data-img="1783101514857-7e50266c60b8"><small>07</small>Paradise Villa</a>
+    <a href="#villa" data-img="1596178067639-5c6e68aea6dc"><small>07</small>Paradise Villa</a>
     <a href="#films" data-img="1531429957-9e7c26e39c84"><small>08</small>Films &amp; Gallery</a>
     <a href="#reserve" data-img="1559956144-83a135c9872e"><small>09</small>Reserve</a>
   </div>
@@ -427,12 +429,12 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 
 <!-- HERO: full-screen turquoise video -->
 <section class="screen hero shade" id="hero">
-  <div class="media" id="heroMedia"><video data-mx="51500" data-poster="1505142468610-359e7d316be0" muted loop playsinline autoplay preload="auto"></video></div>
+  <div class="media" id="heroMedia"><video data-src="media/hero.mp4" data-src-sm="media/hero-sm.mp4" poster="media/hero.jpg" muted loop playsinline autoplay preload="auto"></video></div>
   <div class="hero__c">
     <div class="hero__k caps h-in">Elite Vacations · Join us in Paradise</div>
     <h1 class="display" aria-label="The only vacation for singles in the world"><span class="line"><span>The only vacation</span></span><span class="line"><span>for singles</span></span><span class="line"><span><em>in the world</em></span></span></h1>
     <div class="hero__bar h-in">
-      <div class="hero__stats"><div><b>100</b><span>Gentlemen</span></div><div><b>100</b><span>Ladies</span></div><div><b>7</b><span>Days · 6 nights</span></div></div>
+      <div class="hero__stats"><div><b>100</b><span>Gentlemen</span></div><div><b>100</b><span>Ladies</span></div><div><b>7</b><span>Days · 6 nights</span></div><div><b>$10K</b><span>Bikini contest</span></div></div>
       <div class="scroll-cue caps"><i></i>Scroll to dive in</div>
     </div>
   </div>
@@ -440,9 +442,9 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 
 <!-- DIVE: portal into the sea -->
 <section class="dive" id="dive">
-  <div class="media top"><video data-mx="50233" data-poster="1524946274118-e7680e33ccc5" muted loop playsinline preload="none"></video></div>
-  <div class="portal" id="portal"><div class="media"><video data-mx="44868" data-poster="1582967788606-a171c1080cb0" muted loop playsinline preload="none"></video></div></div>
-  <div class="dive__t"><span class="caps">Crystalline white sand · turquoise ocean</span><div class="display">Dive in.</div><p>Sunny beaches, a turquoise ocean, coral reefs full of colourful fish, and the company of elite international singles.</p></div>
+  <div class="media top"><video data-mx="21279" muted loop playsinline preload="none"></video></div>
+  <div class="portal" id="portal"><div class="media"><video data-mx="1213" muted loop playsinline preload="none"></video></div></div>
+  <div class="dive__t"><span class="caps">Crystalline white sand · turquoise ocean</span><div class="display">Dive in.</div><p>Sunny beaches embellished with crystalline white sand, a turquoise ocean, and the company of elite international singles.</p></div>
 </section>
 
 <!-- STATEMENT -->
@@ -456,17 +458,33 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
   </div>
 </section>
 
+<!-- PRIZE -->
+<section class="screen prize" id="prize">
+  <div class="media"><video data-mx="48653" muted loop playsinline preload="none"></video></div>
+  <div class="prize__c">
+    <span class="caps" style="color:var(--gold)">Paradise Bikini Contest · at every Paradise Club location</span>
+    <div class="prize__amt" id="prizeAmt" aria-label="$10,000">$10,000</div>
+    <p class="lead">to the winner. On the beach at every Paradise Club location, with prizes and sponsors, streamed live alongside the International Modeling Competition and the Miss Paradise beauty pageant.</p>
+    <div class="prize__row">
+      <div><b>On the beach</b><span>Judged in front of the whole resort</span></div>
+      <div><b>Streamed live</b><span>YouTube and social media</span></div>
+      <div><b>Enter</b><span><a href="#reserve" data-tab="lady" style="color:var(--turq)">Apply to compete →</a></span></div>
+      <div><b>Sponsors</b><span><a href="#reserve" data-tab="sponsor" style="color:var(--turq)">Become a sponsor →</a></span></div>
+    </div>
+  </div>
+</section>
+
 <!-- EXPERIENCES: full-screen video stack -->
 <section class="exp" id="experiences">
   <span class="exp__tag caps">The experiences</span>
-  <div class="slide" data-name="Scuba diving"><div class="media shade"><video data-mx="48927" data-poster="1682687981907-170c006e3744" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">01 / 08</span><h3>Scuba <em>diving</em></h3><p>Cancún is home to the world's second-largest barrier reef. Dive the Caribbean, from Cancún to St Lucia's exquisite reefs.</p></div></div></div>
-  <div class="slide" data-name="Snorkeling"><div class="media shade"><video data-mx="1582" data-poster="1583212292454-1fe6229603b7" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">02 / 08</span><h3>Snorkeling <em>the reef</em></h3><p>Float above coral gardens among beautiful, colourful fish in crystal-clear turquoise water.</p></div></div></div>
-  <div class="slide" data-name="Coral reefs"><div class="media shade"><video data-mx="44974" data-poster="1582967788606-a171c1080cb0" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">03 / 08</span><h3>A world of <em>colour</em></h3><p>Bountiful marine life and reefs that are a playground for divers and snorkelers.</p></div></div></div>
-  <div class="slide" data-name="Water skiing"><div class="media shade"><video data-mx="48087" data-poster="1533437823696-9bab5e6b3fe3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">04 / 08</span><h3>Water <em>skiing</em></h3><p>Water skiing, wakeboarding and jet skiing across calm tropical water at sunrise.</p></div></div></div>
+  <div class="slide" data-name="Bikini contest"><div class="media shade"><video data-mx="1111" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">01 / 08</span><h3>The bikini <em>contest</em></h3><p>On the beach at every Paradise Club location, in front of the whole resort. $10,000 to the winner.</p></div></div></div>
+  <div class="slide" data-name="Pool parties"><div class="media shade"><video data-mx="36167" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">02 / 08</span><h3>Pool <em>parties</em></h3><p>Music, all-inclusive drinks and 200 elite international singles who came to meet each other.</p></div></div></div>
+  <div class="slide" data-name="Sunset cruise"><div class="media shade"><img data-un="1708246118417-86df0deb72dd" alt="Friends in swimwear on a yacht"></div><div class="slide__c"><div><span class="slide__n">03 / 08</span><h3>The sunset <em>cruise</em></h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></div></div>
+  <div class="slide" data-name="Latin dance night"><div class="media shade"><img data-un="1531747056595-07f6cbbe10ad" alt="Couple dancing at night"></div><div class="slide__c"><div><span class="slide__n">04 / 08</span><h3>Latin <em>dance night</em></h3><p>Tango, salsa and bachata with live music under the stars.</p></div></div></div>
   <div class="slide" data-name="Jet skiing"><div class="media shade"><video data-mx="20399" data-poster="1505867798796-639ec7e8cdf5" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">05 / 08</span><h3>Jet <em>skiing</em></h3><p>Full speed over the turquoise. Kite-boarding and windsurfing on the trade winds, too.</p></div></div></div>
-  <div class="slide" data-name="Beach volleyball"><div class="media shade"><img data-un="1634501087922-c01c76ed66d6" alt="Beach volleyball on the sand"></div><div class="slide__c"><div><span class="slide__n">06 / 08</span><h3>Beach <em>volleyball</em></h3><p>Afternoon games on white sand, then a swim. The best way to meet everyone on day one.</p></div></div></div>
+  <div class="slide" data-name="Scuba diving"><div class="media shade"><video data-mx="48927" data-poster="1682687981907-170c006e3744" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">06 / 08</span><h3>Scuba <em>diving</em></h3><p>Cancún is home to the world's second-largest barrier reef. Dive the Caribbean, from Cancún to St Lucia's exquisite reefs.</p></div></div></div>
   <div class="slide" data-name="Parasailing"><div class="media shade"><video data-mx="15646" data-poster="1505738313577-5357ff512f16" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">07 / 08</span><h3><em>Parasailing</em></h3><p>See the resort, the reef and the coastline from above.</p></div></div></div>
-  <div class="slide" data-name="Horseback & cruise"><div class="media shade"><video data-mx="46807" data-poster="1618066860737-df4d383c98c3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">08 / 08</span><h3>Horseback <em>at sunset</em></h3><p>Ride along the beach at golden hour, then join the Sunset Cruise.</p></div></div></div>
+  <div class="slide" data-name="Horseback riding"><div class="media shade"><video data-mx="46807" data-poster="1618066860737-df4d383c98c3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">08 / 08</span><h3>Horseback <em>at sunset</em></h3><p>Ride along the beach at golden hour, then join the Sunset Cruise.</p></div></div></div>
   <div class="exp__idx" id="expIdx"></div>
 </section>
 
@@ -476,7 +494,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
     <div class="media"><img data-un="1630252421399-ddde79af47b3" alt=""></div>
     <div class="media" style="background:#0b1416"><img data-un="1625723347040-0fdf78cb3c1e" alt=""></div>
     <div class="media"><img data-un="1580541631971-a0e8ce42e97f" alt=""></div>
-    <div class="media"><img data-un="1776761420375-c50a5a3b2e0d" alt=""></div>
+    <div class="media"><img data-un="1749183563789-ae17d4a952d2" alt=""></div>
   </div>
   <div class="opts__c">
     <div>
@@ -485,7 +503,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
         <div class="otext"><span class="caps">Option one</span><h3><s>The tropical resort</s></h3><p>Lovely resort, gorgeous beach, a beautiful turquoise ocean and the company of 1,000 newlyweds, couples with or without screaming children… and you, all by yourself!</p></div>
         <div class="otext"><span class="caps">Option two</span><h3><s>The so-called “Adult Club”</s></h3><p>Tasteless, vulgar and possibly offensive. About 7 women and 500 men with an average age of 96! You want to run away after ten minutes, but it's a little too late: you've already paid for your vacation.</p></div>
         <div class="otext"><span class="caps">Option three</span><h3><s>So-called “Resorts for Singles”</s></h3><p>Same as above, just a different name!</p></div>
-        <div class="otext"><span class="caps">Option four</span><h3><em>Elite Vacations</em></h3><p>The only vacation for singles of its kind in the world, where 100 successful, charismatic men and 100 beautiful, fascinating women meet every other month at the world's best international resorts, fully reserved for our private event.</p><ul><li>200 elite international singles</li><li>All-inclusive food &amp; drinks</li><li>Pageants, dance nights, cruises</li><li>Scuba, jet ski, parasailing</li></ul><a class="btn btn--turq" href="#reserve">Choose Paradise</a></div>
+        <div class="otext"><span class="caps">Option four</span><h3><em>Elite Vacations</em></h3><p>The only vacation for singles of its kind in the world, where 100 successful, charismatic men and 100 beautiful, fascinating women meet every other month at the world's best international resorts, fully reserved for our private event.</p><ul><li>200 elite international singles</li><li>All-inclusive food &amp; drinks</li><li>Bikini contest, pageant, cruises</li><li>Scuba, jet ski, parasailing</li></ul><a class="btn btn--turq" href="#reserve">Choose Paradise</a></div>
       </div>
     </div>
     <div class="opt-count" id="optCount"><span>1</span>/4</div>
@@ -496,8 +514,8 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 <section class="about" id="about">
   <div class="wrap about__grid">
     <div class="about__media">
-      <div class="media" id="aboutPh"><img data-un="1776761420412-e6451f458162" alt="Aerial view of a tropical resort with pools and beach"></div>
-      <div class="inset"><div class="media"><img data-un="1557750505-e7b4d1c40410" alt="Infinity pool at sunrise"></div></div>
+      <div class="media" id="aboutPh"><img data-un="1780631742225-053ddbd9a9ca" alt="Guests in an infinity pool overlooking the ocean"></div>
+      <div class="inset"><div class="media"><img data-un="1777159295553-6e0fc30ca9bc" alt="Woman in a bikini on a sunny beach"></div></div>
     </div>
     <div>
       <span class="caps reveal" style="color:var(--gold)">Why Elite Vacations?</span>
@@ -515,33 +533,18 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 <!-- EVENTS: horizontal full-height -->
 <section class="events" id="events">
   <div class="events__head">
-    <div><span class="caps" style="color:var(--gold)">Events</span><h2 class="h2" style="margin-top:18px">Miss Paradise, Tango Night, <em>the Sunset Cruise</em></h2></div>
+    <div><span class="caps" style="color:var(--gold)">Events</span><h2 class="h2" style="margin-top:18px">Miss Paradise, the Bikini Contest, <em>Tango Night</em></h2></div>
     <p class="lead">Whether you meet someone special at the Miss Paradise Contest, Tango Night or on the Sunset Cruise, the pleasure will be both of yours to share. We're certain you'll have the most amazing vacation of your life.</p>
   </div>
   <div class="ev-pin" id="evPin"><div class="ev-track" id="evTrack">
-    <article class="evp"><div class="media"><img data-un="1767962270437-a906d15d98f5" alt="Woman wearing a crown and sash"></div><span class="evp__n">I</span><div class="evp__c"><span class="caps">Beauty pageant</span><h3>Miss Paradise Contest</h3><p>The signature night of every Paradise Club week, crowned in front of all our guests.</p></div></article>
-    <article class="evp"><div class="media"><img data-un="1554882195-8cf792f9a571" alt="Model on a catwalk"></div><span class="evp__n">II</span><div class="evp__c"><span class="caps">Broadcast on YouTube</span><h3>International Modeling Competition</h3><p>A world modeling competition staged at the resort and broadcast on YouTube.</p></div></article>
-    <article class="evp"><div class="media"><img data-un="1747172556306-5ec4ef189070" alt="Contestant on stage"></div><span class="evp__n">III</span><div class="evp__c"><span class="caps">$10,000 to the winner</span><h3>Paradise Bikini Contest</h3><p>On the beach at every Paradise Club location, with prizes and sponsors.</p></div></article>
-    <article class="evp"><div class="media"><img data-un="1744280054687-e8b72c1ff390" alt="Couple dancing tango with a live orchestra"></div><span class="evp__n">IV</span><div class="evp__c"><span class="caps">Latin dance night</span><h3>Tango Night</h3><p>Tango, salsa and bachata with live music under the stars.</p></div></article>
-    <article class="evp"><div class="media"><img data-un="1531429957-9e7c26e39c84" alt="Sailboat at sea near the shore"></div><span class="evp__n">V</span><div class="evp__c"><span class="caps">Golden hour</span><h3>The Sunset Cruise</h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1593836788196-9fd68e904906" alt="Woman in a red bikini on the beach"></div><span class="evp__n">I</span><div class="evp__c"><span class="caps">$10,000 to the winner</span><h3>Paradise Bikini Contest</h3><p>On the beach at every Paradise Club location, with prizes and sponsors. The winner takes home $10,000.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1767962270437-a906d15d98f5" alt="Woman wearing a crown and sash"></div><span class="evp__n">II</span><div class="evp__c"><span class="caps">Beauty pageant</span><h3>Miss Paradise Contest</h3><p>The signature night of every Paradise Club week, crowned in front of all our guests.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1762430815576-6b69de7a1f5f" alt="Model on a runway with an audience"></div><span class="evp__n">III</span><div class="evp__c"><span class="caps">Broadcast on YouTube</span><h3>International Modeling Competition</h3><p>A world modeling competition staged at the resort and broadcast on YouTube.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1575448913281-98e9e5d3f193" alt="Couple dancing tango"></div><span class="evp__n">IV</span><div class="evp__c"><span class="caps">Latin dance night</span><h3>Tango Night</h3><p>Tango, salsa and bachata with live music under the stars.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1552600337-6f42e4fb2e78" alt="Four women on a yacht"></div><span class="evp__n">V</span><div class="evp__c"><span class="caps">Golden hour</span><h3>The Sunset Cruise</h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></article>
     <article class="evp"><div class="media"><img data-un="1734421989465-47be92f9f126" alt="Performers on a stage"></div><span class="evp__n">VI</span><div class="evp__c"><span class="caps">Live entertainment</span><h3>Talent Shows</h3><p>Many of our ladies perform as Paradise Club entertainers: dancers, singers and other talents.</p></div></article>
-    <article class="evp"><div class="media"><img data-un="1546484458-6904289cd4f0" alt="People in a swimming pool"></div><span class="evp__n">VII</span><div class="evp__c"><span class="caps">Every night</span><h3>Pool &amp; Beach Parties</h3><p>All-inclusive food and drinks, music, and 200 guests who came to meet each other.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1696668827476-8c99c513805c" alt="Woman jumping into a pool at a party"></div><span class="evp__n">VII</span><div class="evp__c"><span class="caps">Every night</span><h3>Pool &amp; Beach Parties</h3><p>All-inclusive food and drinks, music, and 200 guests who came to meet each other.</p></div></article>
   </div></div>
-</section>
-
-<!-- PRIZE -->
-<section class="screen prize" id="prize">
-  <div class="media"><video data-mx="22559" data-poster="1612872087720-bb876e2e67d1" muted loop playsinline preload="none"></video></div>
-  <div class="prize__c">
-    <span class="caps" style="color:var(--gold)">Paradise Bikini Contest · every location</span>
-    <div class="prize__amt" id="prizeAmt" aria-label="$10,000">$10,000</div>
-    <p class="lead">to the winner. Contests with prizes and sponsors, streamed live alongside the International Modeling Competition.</p>
-    <div class="prize__row">
-      <div><b>On the beach</b><span>Judged in front of the whole resort</span></div>
-      <div><b>Streamed live</b><span>YouTube and social media</span></div>
-      <div><b>Sponsors</b><span><a href="#reserve" data-tab="sponsor" style="color:var(--turq)">Become a sponsor →</a></span></div>
-    </div>
-  </div>
 </section>
 
 <!-- INVITE -->
@@ -558,9 +561,9 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 </section>
 <section class="pk" id="packages">
   <div class="pk__grid">
-    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1520115736066-2190b58a4b9e" alt="White yacht on the water"></div></div><div class="pk__b"><span class="caps">Package I</span><h3>Gentleman</h3><ul><li>7 days / 6 nights, all-inclusive food &amp; drinks</li><li>Every event: Miss Paradise, Tango Night, the Sunset Cruise</li><li>Scuba, snorkeling, jet ski, parasailing, horseback riding</li><li>A resort shared only with 200 elite singles</li></ul><a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Gentleman">Request pricing</a></div></article>
-    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1507525428034-b723cf961d3e" alt="Beach at golden hour"></div></div><div class="pk__b"><span class="caps">Package II</span><h3>Gentleman &amp; Lady</h3><ul><li>Everything in Gentleman</li><li>Invite the girl you've been talking to online</li><li>You cover her trip; we arrange her flight and stay</li><li>Meet in person, without the pressure of a first date</li></ul><a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Gentleman + Lady">Invite her</a></div></article>
-    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1765999906700-2d4dfd392966" alt="Pool overlooking the ocean"></div></div><div class="pk__b"><span class="caps">Package III</span><h3>Paradise Villa</h3><ul><li>All the perks of Paradise Club</li><li>A grandiose private mansion in our Caribbean resort</li><li>The high life by day, a private getaway by night</li><li>Very limited availability</li></ul><a class="btn btn--dark" href="#villa">Discover the villa</a></div></article>
+    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1520115736066-2190b58a4b9e" alt="White yacht on the water"></div></div><div class="pk__b"><span class="caps">Package I</span><h3>Gentleman</h3><ul><li>7 days / 6 nights, all-inclusive food &amp; drinks</li><li>Every event: Bikini Contest, Miss Paradise, Tango Night, the Sunset Cruise</li><li>Scuba, snorkeling, jet ski, parasailing, horseback riding</li><li>A resort shared only with 200 elite singles</li></ul><a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Gentleman">Request pricing</a></div></article>
+    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1772308113209-cf25636ddfd5" alt="Woman with a cocktail by the pool"></div></div><div class="pk__b"><span class="caps">Package II</span><h3>Gentleman &amp; Lady</h3><ul><li>Everything in Gentleman</li><li>Invite the girl you've been talking to online</li><li>You cover her trip; we arrange her flight and stay</li><li>Meet in person, without the pressure of a first date</li></ul><a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Gentleman + Lady">Invite her</a></div></article>
+    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1543489822-c49534f3271f" alt="Infinity pool overlooking a bay"></div></div><div class="pk__b"><span class="caps">Package III</span><h3>Paradise Villa</h3><ul><li>All the perks of Paradise Club</li><li>A grandiose private mansion in our Caribbean resort</li><li>The high life by day, a private getaway by night</li><li>Very limited availability</li></ul><a class="btn btn--dark" href="#villa">Discover the villa</a></div></article>
   </div>
 </section>
 
@@ -600,7 +603,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 
 <!-- VILLA -->
 <section class="screen villa" id="villa">
-  <div class="media" id="villaPh"><img data-un="1783101514857-7e50266c60b8" alt="Infinity pool overlooking the ocean"></div>
+  <div class="media" id="villaPh"><img data-un="1596178067639-5c6e68aea6dc" alt="Private villa with a pool among palm trees"></div>
   <div class="villa__panel reveal">
     <span class="caps">Paradise Villa</span>
     <h2 class="h2" style="margin-top:16px">The high life by day. <em>A mansion by night.</em></h2>
@@ -628,7 +631,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
   <span class="caps reveal" style="color:var(--gold)">Paradise Club Preview</span>
   <h2 class="h2 reveal" style="margin-top:18px">Paradise <em>on film</em></h2>
   <button class="film-main reveal" id="filmMain" type="button" aria-label="Play the Paradise Club preview"><img alt="" id="filmMainImg"><span class="play">Play</span><span class="film-label caps">Paradise Club Preview</span></button>
-  <div class="film-tabs" role="tablist" aria-label="Video libraries"><button type="button" role="tab" aria-selected="true" data-lib="0" id="ft0">Video Library 1</button><button type="button" role="tab" aria-selected="false" data-lib="1" id="ft1">Video Library 2</button></div>
+
   <div class="film-grid" id="filmGrid"></div>
 </section>
 
@@ -642,7 +645,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 
 <!-- RESERVE -->
 <section class="screen reserve" id="reserve">
-  <div class="media"><video data-mx="44499" data-poster="1596669500506-f036c9f37692" muted loop playsinline preload="none"></video></div>
+  <div class="media"><video data-mx="1114" muted loop playsinline preload="none"></video></div>
   <div class="reserve__c">
     <div>
       <span class="caps" style="color:var(--gold)">Reservations</span>
@@ -680,7 +683,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
   <p class="caps" style="margin-top:22px;opacity:.75">The only vacation for singles in the world</p>
   <div class="foot__row">
     <span>© <span id="yr">2026</span> My Paradise Club. All rights reserved. Paradise Club is a subsidiary of Diversified Global Ventures, Corp.</span>
-    <nav aria-label="Footer"><a href="#experiences">Experiences</a><a href="#destinations">Destinations</a><a href="#films">Films</a><a href="#reserve">Reserve</a><a href="tel:18776777795">1-877-677-7795</a></nav>
+    <nav aria-label="Footer"><a href="#prize">Bikini Contest</a><a href="#experiences">Experiences</a><a href="#destinations">Destinations</a><a href="#films">Films</a><a href="#reserve">Reserve</a><a href="tel:18776777795">1-877-677-7795</a></nav>
   </div>
 </footer>
 
@@ -711,14 +714,14 @@ function WIX(id,w,h,ext,mode){ext=ext||"jpg";mode=mode||"fill";var f=id+"."+ext;
 function nf(el){var m=el.closest(".media,.gi,.fthumb,.film-main");if(m)m.classList.add("nf");}
 
 $$("img[data-un]").forEach(function(im){im.decoding="async";if(!im.closest(".hero"))im.loading="lazy";im.onerror=function(){nf(im);};im.src=UN(im.dataset.un,im.closest(".evp,.pk__img,.inset")?1200:2000);});
-$$("video[data-mx]").forEach(function(v){v.muted=true;v.setAttribute("muted","");if(v.dataset.poster)v.poster=UN(v.dataset.poster,1600);});
+$$("video[data-mx],video[data-src]").forEach(function(v){v.muted=true;v.setAttribute("muted","");if(v.dataset.poster)v.poster=UN(v.dataset.poster,1600);else if(v.dataset.mx)v.poster="https://assets.mixkit.co/videos/"+v.dataset.mx+"/"+v.dataset.mx+"-thumb-720-0.jpg";});
 var logo=$("#logo");logo.onerror=function(){logo.style.display="none";};logo.src=WIX("45f0be61d005edb2ecb7ee8c2085ca7c",120,120,"png","fit");
 
 // load videos when near the viewport; play only when visible
-function loadVideo(v){if(v.dataset.loaded)return;v.dataset.loaded="1";var id=v.dataset.mx;[mobile?"360":"720",mobile?"720":"360"].forEach(function(q){var s=document.createElement("source");s.src=MX(id,q);s.type="video/mp4";v.appendChild(s);});v.load();}
+function loadVideo(v){if(v.dataset.loaded)return;v.dataset.loaded="1";if(v.dataset.src){var ls=document.createElement("source");ls.src=mobile&&v.dataset.srcSm?v.dataset.srcSm:v.dataset.src;ls.type="video/mp4";v.appendChild(ls);v.load();return;}var id=v.dataset.mx;[mobile?"360":"720",mobile?"720":"360"].forEach(function(q){var s=document.createElement("source");s.src=MX(id,q);s.type="video/mp4";v.appendChild(s);});v.load();}
 function playV(v){loadVideo(v);var p=v.play();if(p&&p.catch)p.catch(function(){});}
 function pauseV(v){if(!v.paused)v.pause();}
-var vids=$$("video[data-mx]");
+var vids=$$("video[data-mx],video[data-src]");
 if("IntersectionObserver" in window){
   var near=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)loadVideo(e.target);});},{rootMargin:"150% 0px"});
   var vis=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(v.closest(".slide"))return;if(e.isIntersecting)playV(v);else pauseV(v);});},{threshold:.05});
@@ -740,17 +743,17 @@ var D=[
  {n:"Cancún",r:"Mexico · Caribbean",img:"1602088113235-229c19758e9f",t:"A tropical paradise that remains one of the world's top destinations, with great weather, pumping nightlife and some of the coolest activities in Mexico. Home to the world's second-largest barrier reef, Cancún is ideal for scuba diving and snorkeling."},
  {n:"Playa del Carmen",r:"Mexico · Riviera Maya",img:"1640617547871-15e4fb41d0c5",t:"Just south of Cancún on the Riviera Maya: soft white-sand beaches, the lively Quinta Avenida, cenotes for swimming, and a short ferry to the reefs of Cozumel."},
  {n:"Puerto Vallarta",r:"Mexico · Pacific",img:"1637892652226-76f8bbd184dd",t:"Mexico's prettiest resort town is also one of its most diverse: the cobblestone streets of Old Vallarta, the yacht marina, and from Costalegre to the Riviera Nayarit, miles of sandy beaches, stellar restaurants and lively nightclubs."},
+ {n:"Málaga · Costa del Sol",r:"Spain · Andalusia",img:"1512753360435-329c4535a9a7",t:"Andalusia's city of culture, its 'mile of art' compared to Madrid and its dining to Barcelona, crowned by the 11th-century Gibralfaro castle above the Costa del Sol."},
+ {n:"Capri",r:"Italy · Bay of Naples",img:"1559509354-1c00ed744bcb",t:"A breathtaking island whose seductive charms have drawn visitors for thousands of years, from the colourful harbour of Marina Grande up to the famous Piazzetta."},
  {n:"Bahamas",r:"Nassau · Caribbean",img:"1559956144-83a135c9872e",t:"Mirages of powdery white sand against an indigo sea, and leaning palms rustling in the cooling trade breeze. Secluded, untouched beaches, and stunning beaches with activities galore within a sun-kissed arm's reach."},
  {n:"Jamaica",r:"Caribbean",img:"1437719417032-8595fd9e9dc6",t:"One of the Caribbean's most iconic islands: rainforest, soaring mountains and dramatic coastlines. The scenery is breathtaking, the cuisine is scrumptious, the music is pulsating and the people are unforgettable."},
+ {n:"Costa Rica",r:"Central America",img:"1536709017021-ce8f99c17e38",t:"Exquisite beaches lead up to fiery volcanoes through some of the most verdant forest in the world. On the Pacific Ring of Fire, remarkably different from coast to coast."},
  {n:"St Lucia",r:"Eastern Caribbean",img:"1706645616928-1902d9a6b929",t:"Greeted by the Piton Mountains rising majestically from the surf, fringed by coral reefs and swaying palms. Exquisite reefs for divers and snorkelers, and trade winds for kite-boarding and windsurfing."},
  {n:"Dominican Republic",r:"Caribbean",img:"1705507972578-78537a2dda73",t:"Vast coral reefs, waterfalls, jungles and secluded islands. Raft the Río Yaque del Norte, then snorkel, dive, kayak, kite-board, sail and surf along the coast."},
- {n:"Costa Rica",r:"Central America",img:"1536709017021-ce8f99c17e38",t:"Exquisite beaches lead up to fiery volcanoes through some of the most verdant forest in the world. On the Pacific Ring of Fire, remarkably different from coast to coast."},
  {n:"Panamá",r:"Central America",img:"1632505702897-cc41b0ba3b64",t:"Two oceans, mountains and rainforest, native cultures and vibrant urban life in a single week. Panamá City is a modern, sophisticated metropolis of commerce, arts, fashion and dining."},
  {n:"Hawaii",r:"Pacific",img:"1505852679233-d9fd70aff56d",t:"Good weather, magnificent views, blue waters, hula and exquisite cuisine. Kauai's wild beauty and the beaches of the Coconut Coast are perfect for a romantic escapade."},
- {n:"Málaga · Costa del Sol",r:"Spain · Andalusia",img:"1512753360435-329c4535a9a7",t:"Andalusia's city of culture, its 'mile of art' compared to Madrid and its dining to Barcelona, crowned by the 11th-century Gibralfaro castle above the Costa del Sol."},
  {n:"Barcelona",r:"Spain · Catalonia",img:"1599484233778-5bdc6b69bbe3",t:"Striking architecture, world-class museums and the rhythms of Catalonia. A beachside metropolis of tapas bars and Gaudí, from hillside parks to public buildings."},
  {n:"Monaco",r:"Côte d'Azur",img:"1595138320174-a64d168e9970",t:"Pristine blue waters, warm weather and high rollers. Beautiful, chic, great weather and even better food."},
- {n:"Capri",r:"Italy · Bay of Naples",img:"1559509354-1c00ed744bcb",t:"A breathtaking island whose seductive charms have drawn visitors for thousands of years, from the colourful harbour of Marina Grande up to the famous Piazzetta."},
  {n:"Amalfi Coast",r:"Italy · Campania",img:"1612698093158-e07ac200d44e",t:"Pastel villages such as Positano, Amalfi and Ravello cling to the cliffs above the Tyrrhenian Sea. Lemon groves, cliffside terraces and boat trips to hidden coves."},
  {n:"Greek Islands",r:"Aegean · Ionian",img:"1570077188670-e3a8d69ac5ff",t:"1,400 islands, 230 of them inhabited, among the Mediterranean's most beautiful assets, with some of the most picturesque seascapes on Earth."}
 ];
@@ -774,14 +777,13 @@ function restartDestTimer(){if(dTimer)dTimer.kill&&dTimer.kill();if(!hasGsap||re
 var tsx=0;$("#destinations").addEventListener("touchstart",function(e){tsx=e.touches[0].clientX;},{passive:true});$("#destinations").addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-tsx;if(Math.abs(dx)>60)goDest(dIdx+(dx<0?1:-1),true);});
 
 /* ---------- films ---------- */
-var VIDEOS=[["d_faWr5x7q4","ihoFIdzpIVg","FNEnHMq5_E8","dm_3_Z2Ewoo","veggdJvKju4","LElWY7PQDKw","gv15Uq9nXtE","5_c-wQWr7_g","2REyxTEWNO4"],["f4q029GmPvE","MvjNd-YnmZc","ILPYZoB6G2s","W4fvljse3ew","IysmJmrA8js","iJxEsCc6BGI","skRJYSNvYx0","lG2eh__ck7o","PUhTH816ysc"]];
-var fmImg=$("#filmMainImg");fmImg.onerror=function(){nf(fmImg);};fmImg.src="https://i.ytimg.com/vi/lG2eh__ck7o/maxresdefault.jpg";
-$("#filmMain").addEventListener("click",function(){openVideo("lG2eh__ck7o","Paradise Club Preview");});
+var FILMS=[["48719","Pool day"],["36167","Pool party"],["21236","Drinks in the pool"],["4446","Yacht night"],["49235","Latin dance night"],["47779","On the runway"],["21274","Poolside"],["1114","Sunset swim"],["37008","Sunset on the beach"]];
+var fmImg=$("#filmMainImg");fmImg.onerror=function(){nf(fmImg);};fmImg.src="media/promo.jpg";
+$("#filmMain").addEventListener("click",function(){openLocal("media/promo.mp4","Paradise Club Preview");});
 var fg=$("#filmGrid");
-function renderFilms(lib,anim){fg.innerHTML="";VIDEOS[lib].forEach(function(id,i){var lbl="Library "+(lib+1)+" · Film "+(i+1);var b=document.createElement("button");b.type="button";b.className="fthumb";b.setAttribute("aria-label","Play "+lbl);var im=new Image();im.alt="";im.loading="lazy";im.onerror=function(){b.classList.add("nf");};im.src="https://i.ytimg.com/vi/"+id+"/hqdefault.jpg";b.appendChild(im);b.insertAdjacentHTML("beforeend","<span>"+lbl+"</span>");b.addEventListener("click",function(){openVideo(id,lbl);});fg.appendChild(b);});
-  if(anim&&hasGsap&&!reduced)gsap.from(fg.children,{y:30,opacity:0,stagger:.05,duration:.8,ease:"expo.out"});}
-renderFilms(0);
-$$(".film-tabs button").forEach(function(b){b.addEventListener("click",function(){$$(".film-tabs button").forEach(function(z){z.setAttribute("aria-selected","false");});b.setAttribute("aria-selected","true");renderFilms(+b.dataset.lib,true);});});
+function renderFilms(){fg.innerHTML="";FILMS.forEach(function(f){var b=document.createElement("button");b.type="button";b.className="fthumb";b.setAttribute("aria-label","Play "+f[1]);var im=new Image();im.alt="";im.loading="lazy";im.onerror=function(){b.classList.add("nf");};im.src="https://assets.mixkit.co/videos/"+f[0]+"/"+f[0]+"-thumb-720-0.jpg";b.appendChild(im);b.insertAdjacentHTML("beforeend","<span>"+f[1]+"</span>");b.addEventListener("click",function(){openLocal(MX(f[0],"720"),f[1]);});fg.appendChild(b);});}
+renderFilms();
+
 
 /* ---------- gallery (club's own photos from the Wix site) ---------- */
 var G=[["f98334123a6e5543dbcd694307e07894","jpg","Resort",1.5],["537a8090bf9c67a93abc4889f0fbdfc6","jpg","Resort",1.33],["f756054f64ae562045797743cf962659","jpg","Resort",1.33],["18c84fdcdc59c9ae8b0f0eaa7a81565e","jpg","Resort",1.6],["593cf5fe2d44f8fd7c41448cd0246bc1","jpg","Resort",2.1],
@@ -799,7 +801,7 @@ var lb=$("#lb"),stage=$("#lbStage"),lbIdx=0,lbMode="img",lastFocus=null;
 function lockScroll(on){document.documentElement.style.overflow=on?"hidden":"";if(window.__lenis){if(on)window.__lenis.stop();else window.__lenis.start();}}
 function showLB(i){lbIdx=(i+G.length)%G.length;var x=G[lbIdx];stage.innerHTML="";var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.onerror=function(){stage.innerHTML="<p>This photo is hosted on Wix and could not load here.</p>";};im.src=x[1]==="png"?WIX(x[0],1400,1400,"png","fit"):WIX(x[0],1900,1900,"jpg","fit");stage.appendChild(im);$("#lbCap").textContent=x[2]+" · "+(lbIdx+1)+" / "+G.length;if(hasGsap&&!reduced)gsap.fromTo(im,{opacity:0,scale:.97},{opacity:1,scale:1,duration:.7,ease:"expo.out"});}
 function openLB(i){lbMode="img";$("#lbNav").hidden=false;lastFocus=document.activeElement;showLB(i);lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
-function openVideo(id,label){lbMode="vid";$("#lbNav").hidden=true;lastFocus=document.activeElement;stage.innerHTML='<div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="'+label+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>';$("#lbCap").innerHTML=label+' · <a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener" style="color:var(--gold)">Open on YouTube</a>';lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
+function openLocal(src,label){lbMode="vid";$("#lbNav").hidden=true;lastFocus=document.activeElement;stage.innerHTML='<div class="frame"><video src="'+src+'" controls autoplay playsinline style="width:100%;height:100%"></video></div>';$("#lbCap").textContent=label;lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
 function closeLB(){lb.classList.remove("open");stage.innerHTML="";lockScroll(false);if(lastFocus)lastFocus.focus({preventScroll:true});}
 $("#lbClose").addEventListener("click",closeLB);$("#lbPrev").addEventListener("click",function(){showLB(lbIdx-1);});$("#lbNext").addEventListener("click",function(){showLB(lbIdx+1);});
 stage.addEventListener("click",function(e){if(e.target===stage)closeLB();});
