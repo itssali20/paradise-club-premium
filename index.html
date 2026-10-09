@@ -121,7 +121,10 @@ section{position:relative}
 .hero__c{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--gutter) clamp(30px,6vh,64px)}
 .hero__k{margin-bottom:26px;display:flex;align-items:center;gap:16px}
 .hero__k::before{content:"";width:40px;height:1px;background:var(--gold)}
-.hero h1{max-width:13ch}
+.hero.shade::after{background:linear-gradient(90deg,rgba(4,37,44,.62) 0%,rgba(4,37,44,.38) 40%,rgba(4,37,44,0) 70%),linear-gradient(180deg,rgba(4,37,44,.5) 0%,rgba(4,37,44,.1) 25%,rgba(4,37,44,.25) 50%,rgba(4,37,44,.85) 100%)}
+.hero__c{z-index:2;text-shadow:0 2px 24px rgba(4,37,44,.45),0 1px 3px rgba(4,37,44,.35)}
+.hero h1{max-width:13ch;font-weight:400}
+.hero__stats span{opacity:1}
 .hero__bar{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:clamp(28px,5vh,56px);border-top:1px solid rgba(255,255,255,.3);padding-top:22px}
 .hero__stats{display:flex;gap:clamp(22px,4vw,64px)}
 .hero__stats b{display:block;font:300 clamp(2rem,3.4vw,3rem)/1 var(--f-serif);font-variant-numeric:tabular-nums}
@@ -855,7 +858,7 @@ intro.from(".loader__name span",{yPercent:110,duration:1.1})
 
 // hero parallax out
 gsap.to("#heroMedia",{yPercent:25,scale:1.1,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}});
-gsap.to(".hero__c",{yPercent:-20,opacity:0,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"80% top",scrub:true}});
+gsap.to(".hero__c",{yPercent:-8,opacity:0,ease:"power1.in",scrollTrigger:{trigger:"#hero",start:"top top",end:"75% top",scrub:true}});
 
 // DIVE: portal grows to full screen
 var dtl=gsap.timeline({scrollTrigger:{trigger:"#dive",start:"top top",end:"+=180%",scrub:1,pin:true,anticipatePin:1}});
