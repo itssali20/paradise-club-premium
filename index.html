@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paradise Club</title>
+<meta name="description" content="Paradise Club Elite Vacations: the only vacation for singles in the world. 100 successful, charismatic men and 100 beautiful, fascinating women at a private luxury resort.">
+<meta property="og:title" content="Paradise Club · Elite Vacations">
+<meta property="og:description" content="The only vacation for singles in the world. Join us in Paradise.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1505142468610-359e7d316be0?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta name="theme-color" content="#04252c">
+<link rel="icon" href="https://static.wixstatic.com/media/8feb4d_45f0be61d005edb2ecb7ee8c2085ca7c.png/v1/fit/w_64,h_64,q_90/8feb4d_45f0be61d005edb2ecb7ee8c2085ca7c.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://assets.mixkit.co">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: cinematic, full-bleed screens of sea and sun; quiet sand interludes between them; thin gold rules, light serif display, wide-tracked caps */
+:root{
+  --ocean:#04252c;     /* deep water: overlays, dark panels */
+  --lagoon:#0f5c63;
+  --turq:#3cc7c1;      /* turquoise accent */
+  --sand:#f5f0e8;      /* interlude ground */
+  --shell:#fbf9f5;
+  --gold:#c6a76b;      /* fine rules, numerals */
+  --ink:#10262b;
+  --ink-2:#5b6b6d;
+  --white:#ffffff;
+  --line:rgba(16,38,43,.14);
+  --f-serif:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --f-sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --gutter:clamp(18px,4.5vw,72px);
+  --ease:cubic-bezier(.7,0,.2,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--sand);color:var(--ink);font:300 17px/1.7 var(--f-sans);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+::selection{background:var(--turq);color:#fff}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+main{overflow-x:clip}
+section{position:relative}
+.wrap{padding-inline:var(--gutter)}
+.caps{font:400 .72rem/1.4 var(--f-sans);letter-spacing:.32em;text-transform:uppercase}
+.serif{font-family:var(--f-serif);font-weight:300}
+.display{font:300 clamp(3rem,8.4vw,9rem)/.95 var(--f-serif);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.h2{font:300 clamp(2.4rem,5.6vw,5.6rem)/1 var(--f-serif);letter-spacing:-.015em;margin:0;text-wrap:balance}
+.h2 em,.display em{font-style:italic}
+.lead{font-size:clamp(1.02rem,1.3vw,1.18rem);max-width:56ch}
+.rule{width:64px;height:1px;background:var(--gold);border:0;margin:28px 0}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:1.15em 2.1em;border:1px solid currentColor;text-decoration:none;font:400 .72rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase;position:relative;overflow:hidden;isolation:isolate;transition:color .6s var(--ease),border-color .6s}
+.btn::before{content:"";position:absolute;inset:0;background:currentColor;transform:scaleY(0);transform-origin:bottom;transition:transform .6s var(--ease);z-index:-1}
+.btn:hover::before{transform:scaleY(1)}
+.btn--light{color:#fff}
+.btn--light:hover{color:var(--ocean)}
+.btn--light:hover::before{background:#fff}
+.btn--dark{color:var(--ink)}
+.btn--dark:hover{color:#fff}
+.btn--dark:hover::before{background:var(--ink)}
+.btn--turq{background:var(--turq);border-color:var(--turq);color:var(--ocean)}
+.btn--turq::before{background:#fff}
+.media{position:absolute;inset:0;overflow:hidden;background:radial-gradient(120% 80% at 70% 20%,#4fd1c9 0%,#159aa0 35%,#0b5d66 65%,#04252c 100%)}
+.media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.media.nf img{opacity:0}
+.shade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,37,44,.45) 0%,rgba(4,37,44,0) 30%,rgba(4,37,44,0) 55%,rgba(4,37,44,.75) 100%);pointer-events:none}
+.screen{min-height:100svh;color:#fff;overflow:hidden}
+.line{display:block;overflow:hidden}
+.line > span{display:block}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:300;background:var(--ocean);color:#fff;display:grid;place-items:center;pointer-events:none}
+.loader__in{text-align:center}
+.loader__name{font:300 clamp(2.4rem,6vw,4.6rem)/1 var(--f-serif);letter-spacing:.02em;overflow:hidden}
+.loader__name span{display:inline-block}
+.loader__bar{width:180px;height:1px;background:rgba(255,255,255,.2);margin:22px auto 0;position:relative;overflow:hidden}
+.loader__bar i{position:absolute;inset:0;background:var(--gold);transform-origin:left;transform:scaleX(0)}
+.no-js .loader,.reduced .loader{display:none}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:90;padding:calc(18px + env(safe-area-inset-top,0px)) var(--gutter) 18px;display:flex;align-items:center;justify-content:space-between;color:#fff;transition:background .6s,color .6s,padding .6s,transform .6s var(--ease);pointer-events:none}
+.nav > *{pointer-events:auto}
+.nav.solid{background:rgba(245,240,232,.92);color:var(--ink);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-block:12px}
+.nav.hide{transform:translateY(-100%)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;background:#fff}
+.brand b{display:block;font:400 1.5rem/1 var(--f-serif);letter-spacing:.06em}
+.brand small{display:block;font:400 .58rem/1 var(--f-sans);letter-spacing:.36em;text-transform:uppercase;margin-top:5px;opacity:.8}
+.nav__r{display:flex;align-items:center;gap:clamp(14px,2.4vw,34px)}
+.nav__phone{text-decoration:none;font:400 .78rem/1 var(--f-sans);letter-spacing:.16em}
+.nav__res{text-decoration:none;font:400 .7rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:6px}
+.menu-btn{display:flex;align-items:center;gap:12px;font:400 .7rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase}
+.menu-btn i{display:block;width:28px;height:7px;position:relative}
+.menu-btn i::before,.menu-btn i::after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .5s var(--ease),top .5s}
+.menu-btn i::before{top:0}.menu-btn i::after{top:6px}
+.menu-open .menu-btn i::before{top:3px;transform:rotate(45deg)}
+.menu-open .menu-btn i::after{top:3px;transform:rotate(-45deg)}
+.menu-open .nav{color:#fff;background:transparent;backdrop-filter:none}
+@media (max-width:760px){.nav__phone,.nav__res{display:none}}
+
+/* menu overlay */
+.menu{position:fixed;inset:0;z-index:80;background:var(--ocean);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);clip-path:inset(0 0 100% 0);transition:clip-path 1s var(--ease);visibility:hidden}
+.menu-open .menu{clip-path:inset(0 0 0 0);visibility:visible}
+.menu__links{display:flex;flex-direction:column;justify-content:center;padding:120px var(--gutter) 60px;gap:4px}
+.menu__links a{font:300 clamp(2rem,4.4vw,3.8rem)/1.12 var(--f-serif);text-decoration:none;display:flex;align-items:baseline;gap:18px;opacity:.75;transition:opacity .4s,transform .5s var(--ease)}
+.menu__links a small{font:400 .66rem/1 var(--f-sans);letter-spacing:.3em;color:var(--gold)}
+.menu__links a:hover{opacity:1;transform:translateX(12px);font-style:italic}
+.menu__side{position:relative}
+.menu__side .media{inset:0}
+.menu__side .media img{transition:opacity .8s}
+.menu__info{position:absolute;left:var(--gutter);bottom:40px;right:var(--gutter);z-index:2;display:grid;gap:8px}
+@media (max-width:860px){.menu{grid-template-columns:1fr}.menu__side{display:none}}
+
+/* hero */
+.hero{height:100svh;min-height:600px}
+.hero .media video{transform-origin:center}
+.hero__c{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--gutter) clamp(30px,6vh,64px)}
+.hero__k{margin-bottom:26px;display:flex;align-items:center;gap:16px}
+.hero__k::before{content:"";width:40px;height:1px;background:var(--gold)}
+.hero h1{max-width:13ch}
+.hero__bar{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:clamp(28px,5vh,56px);border-top:1px solid rgba(255,255,255,.3);padding-top:22px}
+.hero__stats{display:flex;gap:clamp(22px,4vw,64px)}
+.hero__stats b{display:block;font:300 clamp(2rem,3.4vw,3rem)/1 var(--f-serif);font-variant-numeric:tabular-nums}
+.hero__stats span{font:400 .64rem/1.3 var(--f-sans);letter-spacing:.28em;text-transform:uppercase;opacity:.85}
+.scroll-cue{display:flex;align-items:center;gap:14px}
+.scroll-cue i{width:1px;height:46px;background:rgba(255,255,255,.35);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;right:0;top:-50%;height:50%;background:#fff;animation:cue 2.2s infinite var(--ease)}
+@keyframes cue{to{top:110%}}
+.sound{position:absolute;right:var(--gutter);top:50%;transform:translateY(-50%) rotate(90deg);transform-origin:right center;color:#fff;opacity:.7}
+
+/* dive */
+.dive{height:100svh;background:var(--ocean)}
+.dive .media.top video{transform-origin:center}
+.portal{position:absolute;inset:0;clip-path:circle(9% at 50% 55%)}
+.dive__t{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;z-index:3;padding:var(--gutter);pointer-events:none}
+.dive__t .display{font-size:clamp(4rem,14vw,14rem);font-style:italic}
+.dive__t p{max-width:46ch;margin:18px auto 0}
+
+/* interlude */
+.interlude{background:var(--sand);padding-block:clamp(100px,14vw,200px)}
+.interlude__grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(36px,7vw,120px);align-items:end}
+.statement{font:300 clamp(2rem,4.2vw,4rem)/1.12 var(--f-serif);margin:0;letter-spacing:-.01em}
+.statement em{font-style:italic;color:var(--lagoon)}
+.statement .w{opacity:.15}
+.no-js .statement .w,.reduced .statement .w{opacity:1}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.pair div{background:var(--sand);padding:26px 0}
+.pair div+div{padding-left:28px}
+.pair b{display:block;font:300 clamp(3.4rem,6vw,5.6rem)/1 var(--f-serif);color:var(--lagoon);font-variant-numeric:tabular-nums}
+.pair span{font:400 .66rem/1.4 var(--f-sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
+.interlude p.small{color:var(--ink-2);margin:26px 0 0}
+
+/* experience stack */
+.exp{height:100svh;background:var(--ocean)}
+.slide{position:absolute;inset:0;overflow:hidden;color:#fff}
+.slide .media{transform-origin:center}
+.slide__c{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;padding:0 var(--gutter) clamp(40px,8vh,90px);gap:30px}
+.slide__n{font:300 1.1rem/1 var(--f-serif);letter-spacing:.1em;color:var(--gold)}
+.slide h3{font:300 clamp(3.2rem,9vw,9.5rem)/.92 var(--f-serif);margin:14px 0 0;letter-spacing:-.02em}
+.slide h3 em{font-style:italic}
+.slide p{max-width:44ch;margin:22px 0 0;font-size:clamp(1rem,1.25vw,1.15rem);opacity:.92}
+.exp__idx{position:absolute;right:var(--gutter);top:50%;transform:translateY(-50%);z-index:5;display:flex;flex-direction:column;gap:12px;color:#fff;text-align:right}
+.exp__idx button{font:400 .62rem/1 var(--f-sans);letter-spacing:.26em;text-transform:uppercase;opacity:.45;transition:opacity .4s,transform .4s;display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.exp__idx button::after{content:"";width:16px;height:1px;background:currentColor;transition:width .4s}
+.exp__idx button.on{opacity:1}
+.exp__idx button.on::after{width:36px;background:var(--gold)}
+.exp__tag{position:absolute;left:var(--gutter);top:calc(110px + env(safe-area-inset-top,0px));z-index:5;color:#fff}
+@media (max-width:760px){.exp__idx{display:none}.slide__c{grid-template-columns:1fr}}
+
+/* options */
+.opts{height:100svh;background:var(--ocean);color:#fff}
+.opt-bg{position:absolute;inset:0}
+.opt-bg .media{opacity:0}
+.opt-bg .media:first-child{opacity:1}
+.opt-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.88) 0%,rgba(4,37,44,.55) 50%,rgba(4,37,44,.2) 100%)}
+.opts__c{position:absolute;inset:0;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding:110px var(--gutter) 60px;gap:40px}
+.opt-texts{position:relative;min-height:420px}
+.otext{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;visibility:hidden}
+.otext:first-child{opacity:1;visibility:visible}
+.otext .caps{color:var(--gold)}
+.otext h3{font:300 clamp(2.4rem,5vw,4.8rem)/1 var(--f-serif);margin:18px 0 0}
+.otext h3 s{text-decoration-thickness:1px;text-decoration-color:var(--gold)}
+.otext p{margin:22px 0 0;max-width:46ch;opacity:.9}
+.otext ul{list-style:none;padding:0;margin:22px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:.95rem}
+.otext li::before{content:"— ";color:var(--gold)}
+.opt-count{font:300 clamp(6rem,16vw,15rem)/.8 var(--f-serif);text-align:right;color:rgba(255,255,255,.12);font-variant-numeric:tabular-nums}
+.opt-count span{color:#fff}
+@media (max-width:860px){.opts__c{grid-template-columns:1fr;align-items:start;padding-top:96px}.opt-count{display:none}.otext ul{grid-template-columns:1fr}.opt-texts{min-height:620px;margin-top:18px}.otext{justify-content:flex-start}}
+
+/* about */
+.about{background:var(--shell);padding-block:clamp(100px,13vw,190px)}
+.about__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,7vw,120px);align-items:start}
+.about__media{position:sticky;top:12vh;height:76vh;overflow:hidden}
+.about__media .media{inset:-10% 0}
+.about__media .inset{position:absolute;right:-1px;bottom:-1px;width:44%;aspect-ratio:3/4;border:10px solid var(--shell);overflow:hidden}
+.about p{color:var(--ink-2);font-size:1.08rem}
+.about p strong{color:var(--ink);font-weight:400}
+.quote{font:300 italic clamp(1.8rem,3vw,2.8rem)/1.2 var(--f-serif);margin:36px 0;color:var(--lagoon);border-left:1px solid var(--gold);padding-left:28px}
+@media (max-width:900px){.about__grid{grid-template-columns:1fr}.about__media{position:relative;top:0;height:64vh}}
+
+/* events horizontal */
+.events{background:var(--ocean);color:#fff;overflow:hidden}
+.events__head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;padding:clamp(100px,12vw,160px) var(--gutter) 50px}
+.events__head .lead{opacity:.85;margin:0}
+.ev-track{display:flex;gap:18px;padding:0 var(--gutter) clamp(80px,10vw,130px);width:max-content}
+.evp{position:relative;width:clamp(300px,34vw,560px);height:min(74svh,760px);flex:none;overflow:hidden;color:#fff}
+.evp .media img{transition:transform 1.6s var(--ease)}
+.evp:hover .media img{transform:scale(1.06)}
+.evp__c{position:absolute;inset:auto 0 0 0;padding:30px;z-index:2;background:linear-gradient(transparent,rgba(4,37,44,.85))}
+.evp__c .caps{color:var(--gold)}
+.evp h3{font:300 clamp(2rem,3vw,2.8rem)/1.02 var(--f-serif);margin:12px 0 10px}
+.evp p{margin:0;font-size:.96rem;opacity:.9}
+.evp__n{position:absolute;top:24px;left:30px;z-index:2;font:300 1.2rem/1 var(--f-serif)}
+@media (max-width:820px){.ev-track{flex-direction:column;width:auto}.evp{width:100%;height:70svh}}
+
+/* prize */
+.prize{height:100svh;min-height:640px}
+.prize .media::after{content:"";position:absolute;inset:0;background:rgba(4,37,44,.55)}
+.prize__c{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--gutter)}
+.prize__amt{font:300 clamp(5.4rem,20vw,19rem)/.85 var(--f-serif);letter-spacing:-.04em;margin:18px 0 6px;font-variant-numeric:tabular-nums}
+.prize__c .lead{opacity:.92}
+.prize__row{display:flex;gap:clamp(20px,5vw,80px);margin-top:44px;flex-wrap:wrap;justify-content:center}
+.prize__row div{max-width:220px}
+.prize__row b{display:block;font:300 1.6rem/1.1 var(--f-serif);margin-bottom:6px}
+.prize__row span{font-size:.9rem;opacity:.85}
+
+/* invite (split screen) */
+.invite{min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--shell)}
+.invite__media{position:relative;min-height:70svh}
+.invite__txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(60px,8vw,130px) var(--gutter)}
+.invite__txt p{color:var(--ink-2);font-size:1.06rem}
+.invite__txt .quote{margin:26px 0}
+@media (max-width:900px){.invite{grid-template-columns:1fr}}
+
+/* packages */
+.pk{background:var(--shell);padding:0 var(--gutter) clamp(100px,12vw,170px)}
+.pk__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,30px)}
+.pk__item{display:flex;flex-direction:column;background:var(--white)}
+.pk__img{position:relative;aspect-ratio:4/5;overflow:hidden}
+.pk__img .media img{transition:transform 1.6s var(--ease)}
+.pk__item:hover .pk__img .media img{transform:scale(1.06)}
+.pk__b{padding:30px 28px 34px;display:flex;flex-direction:column;gap:12px;flex:1}
+.pk__b .caps{color:var(--gold)}
+.pk__b h3{font:300 2.3rem/1 var(--f-serif);margin:0}
+.pk__b ul{list-style:none;padding:0;margin:6px 0 18px;display:grid;gap:8px;color:var(--ink-2);font-size:.95rem}
+.pk__b li{padding-left:18px;position:relative}
+.pk__b li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--gold)}
+.pk__b .btn{margin-top:auto;align-self:flex-start}
+@media (max-width:960px){.pk__grid{grid-template-columns:1fr}.pk__img{aspect-ratio:16/10}}
+
+/* pageant */
+.pageant{min-height:100svh;display:flex;align-items:center}
+.pageant .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.9),rgba(4,37,44,.55) 60%,rgba(4,37,44,.3))}
+.pageant__c{position:relative;z-index:2;width:100%;padding:clamp(110px,12vw,160px) var(--gutter);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,100px)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:60px minmax(0,1fr);gap:18px;padding:24px 0;border-top:1px solid rgba(255,255,255,.22)}
+.steps li:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
+.steps b{font:300 2rem/1 var(--f-serif);color:var(--gold)}
+.steps h3{font:300 1.7rem/1.1 var(--f-serif);margin:0 0 6px}
+.steps p{margin:0;opacity:.88;font-size:.98rem}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tags span{font:400 .6rem/1 var(--f-sans);letter-spacing:.24em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);padding:.7em .9em}
+@media (max-width:900px){.pageant__c{grid-template-columns:1fr}}
+
+/* destinations */
+.dest{height:100svh;min-height:640px;background:var(--ocean)}
+.dslide{position:absolute;inset:0;opacity:0;visibility:hidden}
+.dslide.on{opacity:1;visibility:visible}
+.dslide .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.82) 0%,rgba(4,37,44,.35) 55%,rgba(4,37,44,.1) 100%)}
+.dest__c{position:absolute;inset:0;z-index:3;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);padding:120px var(--gutter) 50px;gap:40px;color:#fff;pointer-events:none}
+.dest__c > *{pointer-events:auto}
+.dest__txt{align-self:end}
+.dest__txt .caps{color:var(--gold)}
+.dest__name{font:300 clamp(3.4rem,9vw,9rem)/.9 var(--f-serif);margin:14px 0 0;letter-spacing:-.02em}
+.dest__name .line > span{will-change:transform}
+.dest__body{max-width:52ch;margin:22px 0 0;opacity:.92;min-height:7.5em}
+.dest__nav{display:flex;align-items:center;gap:22px;margin-top:28px}
+.dest__nav button{width:56px;height:56px;border:1px solid rgba(255,255,255,.5);border-radius:50%;color:#fff;font-size:1.1rem;transition:background .4s,color .4s}
+.dest__nav button:hover{background:#fff;color:var(--ocean)}
+.dest__count{font:300 1.2rem/1 var(--f-serif);font-variant-numeric:tabular-nums}
+.dest__list{align-self:center;justify-self:end;list-style:none;margin:0;padding:0;display:grid;gap:2px;text-align:right}
+.dest__list button{font:300 1.25rem/1.35 var(--f-serif);color:#fff;opacity:.5;transition:opacity .4s,transform .4s}
+.dest__list button:hover{opacity:.9}
+.dest__list button.on{opacity:1;font-style:italic;transform:translateX(-8px)}
+.dest__prog{position:absolute;left:0;bottom:0;height:2px;background:var(--gold);z-index:4;width:0}
+@media (max-width:900px){.dest__c{grid-template-columns:1fr}.dest__list{display:none}}
+
+/* villa */
+.villa{min-height:100svh;display:flex;align-items:flex-end}
+.villa__panel{position:relative;z-index:2;margin:0 var(--gutter) clamp(30px,6vh,70px);background:rgba(245,240,232,.94);color:var(--ink);max-width:560px;padding:clamp(28px,4vw,52px);backdrop-filter:blur(10px)}
+.villa__panel .caps{color:var(--gold)}
+.villa__panel p{color:var(--ink-2)}
+.villa__panel .h2{font-size:clamp(2.2rem,4vw,3.8rem)}
+
+/* safety */
+.safety{background:var(--sand);padding:clamp(100px,12vw,170px) var(--gutter)}
+.safe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:60px;border-top:1px solid var(--line)}
+.safe-grid > div{padding:36px 30px 10px 0}
+.safe-grid > div + div{padding-left:30px;border-left:1px solid var(--line)}
+.safe-grid b{font:300 2.6rem/1 var(--f-serif);color:var(--gold)}
+.safe-grid h3{font:300 1.9rem/1.1 var(--f-serif);margin:14px 0 10px}
+.safe-grid p{margin:0;color:var(--ink-2)}
+@media (max-width:860px){.safe-grid{grid-template-columns:1fr}.safe-grid > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* films */
+.films{background:var(--ocean);color:#fff;padding:clamp(100px,12vw,170px) var(--gutter)}
+.film-main{position:relative;display:block;width:100%;aspect-ratio:21/9;overflow:hidden;margin-top:56px;color:#fff;background:radial-gradient(120% 80% at 70% 20%,#4fd1c9 0%,#159aa0 35%,#0b5d66 65%,#04252c 100%)}
+.film-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.film-main:hover img{transform:scale(1.04)}
+.film-main.nf img{opacity:0}
+.film-main::after{content:"";position:absolute;inset:0;background:rgba(4,37,44,.3)}
+.play{position:absolute;left:50%;top:50%;z-index:2;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:50%;border:1px solid rgba(255,255,255,.7);display:grid;place-items:center;font:400 .62rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase;transition:transform .6s var(--ease),background .6s}
+.film-main:hover .play{transform:scale(1.1);background:rgba(255,255,255,.12)}
+.film-label{position:absolute;left:30px;bottom:24px;z-index:2}
+.film-tabs{display:flex;gap:30px;margin-top:50px;border-bottom:1px solid rgba(255,255,255,.2)}
+.film-tabs button{padding:0 0 14px;font:400 .7rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:.55;border-bottom:1px solid transparent;margin-bottom:-1px;transition:opacity .4s}
+.film-tabs button[aria-selected="true"]{opacity:1;border-color:var(--gold)}
+.film-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.fthumb{position:relative;aspect-ratio:16/9;overflow:hidden;color:#fff;background:var(--lagoon)}
+.fthumb img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.fthumb.nf img{opacity:0}
+.fthumb:hover img{transform:scale(1.07)}
+.fthumb span{position:absolute;left:14px;bottom:12px;z-index:2;font:400 .6rem/1 var(--f-sans);letter-spacing:.26em;text-transform:uppercase}
+.fthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(4,37,44,.7))}
+@media (max-width:860px){.film-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.film-main{aspect-ratio:16/10}}
+
+/* gallery */
+.gallery{background:var(--shell);padding:clamp(100px,12vw,170px) var(--gutter)}
+.filters{display:flex;gap:26px;flex-wrap:wrap;margin-top:46px;border-bottom:1px solid var(--line)}
+.filters button{padding:0 0 14px;font:400 .68rem/1 var(--f-sans);letter-spacing:.28em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .4s}
+.filters button[aria-pressed="true"]{color:var(--ink);border-color:var(--gold)}
+.gal{columns:4 260px;column-gap:14px;margin-top:30px}
+.gi{display:block;width:100%;margin:0 0 14px;break-inside:avoid;position:relative;overflow:hidden;cursor:zoom-in;background:#dfe9e7}
+.gi .ph{aspect-ratio:var(--ar,1)}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.gi:hover img{transform:scale(1.06)}
+.gi.png img{object-fit:contain;padding:14px}
+.gi.nf img{opacity:0}
+.gi.hide{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(4,37,44,.97);color:#fff;display:grid;grid-template-rows:auto minmax(0,1fr) auto;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.lb.open{opacity:1;visibility:visible}
+.lb__top{display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) var(--gutter) 18px}
+.lb__stage{display:grid;place-items:center;padding:0 var(--gutter);min-height:0}
+.lb__stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb__stage .frame{width:min(100%,1280px);aspect-ratio:16/9;max-height:100%;background:#000}
+.lb__stage iframe{width:100%;height:100%;border:0}
+.lb__nav{display:flex;justify-content:center;gap:16px;padding:18px 18px calc(22px + env(safe-area-inset-bottom,0px))}
+.lb__nav button,.lb__x{width:54px;height:54px;border:1px solid rgba(255,255,255,.4);border-radius:50%;color:#fff;transition:background .4s,color .4s}
+.lb__nav button:hover,.lb__x:hover{background:#fff;color:var(--ocean)}
+
+/* reserve */
+.reserve{min-height:100svh;display:flex;align-items:center}
+.reserve .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.82),rgba(4,37,44,.45))}
+.reserve__c{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,100px);padding:clamp(110px,12vw,160px) var(--gutter);align-items:center}
+.phone{display:block;font:300 clamp(2.2rem,4vw,3.4rem)/1 var(--f-serif);text-decoration:none;margin-top:10px}
+.form{background:rgba(245,240,232,.96);color:var(--ink);padding:clamp(26px,4vw,48px)}
+.tabs{display:flex;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:26px}
+.tabs button{padding:0 0 12px;font:400 .66rem/1 var(--f-sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--gold)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f--full{grid-column:1/-1}
+.f label{font:400 .6rem/1.3 var(--f-sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink-2)}
+.f input,.f select,.f textarea{border:0;border-bottom:1px solid rgba(16,38,43,.3);background:transparent;padding:.6em 0;font:300 1.05rem/1.4 var(--f-sans);color:var(--ink);border-radius:0;width:100%}
+.f textarea{resize:vertical;min-height:70px}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--gold)}
+.check{grid-column:1/-1;display:flex;gap:12px;font-size:.88rem;color:var(--ink-2);align-items:flex-start}
+.check input{accent-color:var(--lagoon);width:16px;height:16px;margin-top:3px;flex:none}
+.form-ok{grid-column:1/-1}
+.form-ok h4{font:300 2.2rem/1.1 var(--f-serif);margin:0 0 8px}
+.lady-only{display:none}
+.is-lady .lady-only{display:flex}
+.is-lady .gent-only,.is-sponsor .gent-only{display:none}
+@media (max-width:900px){.reserve__c{grid-template-columns:1fr}}
+@media (max-width:540px){form{grid-template-columns:1fr}}
+
+/* footer */
+.foot{background:var(--ocean);color:#fff;padding:clamp(80px,10vw,140px) var(--gutter) 34px;text-align:center}
+.foot__big{font:300 italic clamp(3.4rem,12vw,11rem)/.9 var(--f-serif);margin:0}
+.foot__row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:80px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18);font-size:.84rem;opacity:.85;text-align:left}
+.foot__row nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot__row a{text-decoration:none}
+.foot__row a:hover{color:var(--gold)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body class="no-js">
+
+<div class="loader" aria-hidden="true"><div class="loader__in"><div class="loader__name"><span>Paradise Club</span></div><div class="caps" style="margin-top:12px;opacity:.7">Elite Vacations</div><div class="loader__bar"><i></i></div></div></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Paradise Club home"><img id="logo" alt="" width="40" height="40"><span><b>Paradise Club</b><small>Elite Vacations</small></span></a>
+  <div class="nav__r">
+    <a class="nav__phone" href="tel:18776777795">1-877-677-7795</a>
+    <a class="nav__res" href="#reserve">Reserve</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu"><i></i><span>Menu</span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Main">
+  <div class="menu__links" id="menuLinks">
+    <a href="#experiences" data-img="1682687981907-170c006e3744"><small>01</small>Experiences</a>
+    <a href="#why" data-img="1776761420375-c50a5a3b2e0d"><small>02</small>Why Paradise</a>
+    <a href="#events" data-img="1767962270437-a906d15d98f5"><small>03</small>Events</a>
+    <a href="#invite" data-img="1507525428034-b723cf961d3e"><small>04</small>Gentlemen</a>
+    <a href="#pageant" data-img="1554882195-8cf792f9a571"><small>05</small>Pageant</a>
+    <a href="#destinations" data-img="1612698093158-e07ac200d44e"><small>06</small>Destinations</a>
+    <a href="#villa" data-img="1783101514857-7e50266c60b8"><small>07</small>Paradise Villa</a>
+    <a href="#films" data-img="1531429957-9e7c26e39c84"><small>08</small>Films &amp; Gallery</a>
+    <a href="#reserve" data-img="1559956144-83a135c9872e"><small>09</small>Reserve</a>
+  </div>
+  <div class="menu__side"><div class="media" id="menuMedia"></div><div class="menu__info"><span class="caps">Confidential inquiries</span><a class="phone" href="tel:18776777795" style="font-size:2rem">1-877-677-7795</a></div></div>
+</nav>
+
+<main id="top">
+
+<!-- HERO: full-screen turquoise video -->
+<section class="screen hero shade" id="hero">
+  <div class="media" id="heroMedia"><video data-mx="51500" data-poster="1505142468610-359e7d316be0" muted loop playsinline autoplay preload="auto"></video></div>
+  <div class="hero__c">
+    <div class="hero__k caps h-in">Elite Vacations · Join us in Paradise</div>
+    <h1 class="display" aria-label="The only vacation for singles in the world"><span class="line"><span>The only vacation</span></span><span class="line"><span>for singles</span></span><span class="line"><span><em>in the world</em></span></span></h1>
+    <div class="hero__bar h-in">
+      <div class="hero__stats"><div><b>100</b><span>Gentlemen</span></div><div><b>100</b><span>Ladies</span></div><div><b>7</b><span>Days · 6 nights</span></div></div>
+      <div class="scroll-cue caps"><i></i>Scroll to dive in</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVE: portal into the sea -->
+<section class="dive" id="dive">
+  <div class="media top"><video data-mx="50233" data-poster="1524946274118-e7680e33ccc5" muted loop playsinline preload="none"></video></div>
+  <div class="portal" id="portal"><div class="media"><video data-mx="44868" data-poster="1582967788606-a171c1080cb0" muted loop playsinline preload="none"></video></div></div>
+  <div class="dive__t"><span class="caps">Crystalline white sand · turquoise ocean</span><div class="display">Dive in.</div><p>Sunny beaches, a turquoise ocean, coral reefs full of colourful fish, and the company of elite international singles.</p></div>
+</section>
+
+<!-- STATEMENT -->
+<section class="interlude" id="intro">
+  <div class="wrap interlude__grid">
+    <p class="statement" id="statement">Every other month, one hundred successful, charismatic men meet one hundred beautiful, fascinating women at <em>one of the world's best international resorts</em>, reserved entirely for them.</p>
+    <div>
+      <div class="pair"><div><b data-count="100">100</b><span>Gentlemen</span></div><div><b data-count="100">100</b><span>Ladies</span></div></div>
+      <p class="small reveal">Seven days and six nights, all-inclusive. The hotel, the beach and the restaurants are solely dedicated to our private event and our guests.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES: full-screen video stack -->
+<section class="exp" id="experiences">
+  <span class="exp__tag caps">The experiences</span>
+  <div class="slide" data-name="Scuba diving"><div class="media shade"><video data-mx="48927" data-poster="1682687981907-170c006e3744" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">01 / 08</span><h3>Scuba <em>diving</em></h3><p>Cancún is home to the world's second-largest barrier reef. Dive the Caribbean, from Cancún to St Lucia's exquisite reefs.</p></div></div></div>
+  <div class="slide" data-name="Snorkeling"><div class="media shade"><video data-mx="1582" data-poster="1583212292454-1fe6229603b7" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">02 / 08</span><h3>Snorkeling <em>the reef</em></h3><p>Float above coral gardens among beautiful, colourful fish in crystal-clear turquoise water.</p></div></div></div>
+  <div class="slide" data-name="Coral reefs"><div class="media shade"><video data-mx="44974" data-poster="1582967788606-a171c1080cb0" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">03 / 08</span><h3>A world of <em>colour</em></h3><p>Bountiful marine life and reefs that are a playground for divers and snorkelers.</p></div></div></div>
+  <div class="slide" data-name="Water skiing"><div class="media shade"><video data-mx="48087" data-poster="1533437823696-9bab5e6b3fe3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">04 / 08</span><h3>Water <em>skiing</em></h3><p>Water skiing, wakeboarding and jet skiing across calm tropical water at sunrise.</p></div></div></div>
+  <div class="slide" data-name="Jet skiing"><div class="media shade"><video data-mx="20399" data-poster="1505867798796-639ec7e8cdf5" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">05 / 08</span><h3>Jet <em>skiing</em></h3><p>Full speed over the turquoise. Kite-boarding and windsurfing on the trade winds, too.</p></div></div></div>
+  <div class="slide" data-name="Beach volleyball"><div class="media shade"><img data-un="1634501087922-c01c76ed66d6" alt="Beach volleyball on the sand"></div><div class="slide__c"><div><span class="slide__n">06 / 08</span><h3>Beach <em>volleyball</em></h3><p>Afternoon games on white sand, then a swim. The best way to meet everyone on day one.</p></div></div></div>
+  <div class="slide" data-name="Parasailing"><div class="media shade"><video data-mx="15646" data-poster="1505738313577-5357ff512f16" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">07 / 08</span><h3><em>Parasailing</em></h3><p>See the resort, the reef and the coastline from above.</p></div></div></div>
+  <div class="slide" data-name="Horseback & cruise"><div class="media shade"><video data-mx="46807" data-poster="1618066860737-df4d383c98c3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">08 / 08</span><h3>Horseback <em>at sunset</em></h3><p>Ride along the beach at golden hour, then join the Sunset Cruise.</p></div></div></div>
+  <div class="exp__idx" id="expIdx"></div>
+</section>
+
+<!-- OPTIONS -->
+<section class="opts" id="why">
+  <div class="opt-bg" id="optBg">
+    <div class="media"><img data-un="1630252421399-ddde79af47b3" alt=""></div>
+    <div class="media" style="background:#0b1416"><img data-un="1625723347040-0fdf78cb3c1e" alt=""></div>
+    <div class="media"><img data-un="1580541631971-a0e8ce42e97f" alt=""></div>
+    <div class="media"><img data-un="1776761420375-c50a5a3b2e0d" alt=""></div>
+  </div>
+  <div class="opts__c">
+    <div>
+      <span class="caps" style="opacity:.8">Why we created Elite Vacations</span>
+      <div class="opt-texts" id="optTexts">
+        <div class="otext"><span class="caps">Option one</span><h3><s>The tropical resort</s></h3><p>Lovely resort, gorgeous beach, a beautiful turquoise ocean and the company of 1,000 newlyweds, couples with or without screaming children… and you, all by yourself!</p></div>
+        <div class="otext"><span class="caps">Option two</span><h3><s>The so-called “Adult Club”</s></h3><p>Tasteless, vulgar and possibly offensive. About 7 women and 500 men with an average age of 96! You want to run away after ten minutes, but it's a little too late: you've already paid for your vacation.</p></div>
+        <div class="otext"><span class="caps">Option three</span><h3><s>So-called “Resorts for Singles”</s></h3><p>Same as above, just a different name!</p></div>
+        <div class="otext"><span class="caps">Option four</span><h3><em>Elite Vacations</em></h3><p>The only vacation for singles of its kind in the world, where 100 successful, charismatic men and 100 beautiful, fascinating women meet every other month at the world's best international resorts, fully reserved for our private event.</p><ul><li>200 elite international singles</li><li>All-inclusive food &amp; drinks</li><li>Pageants, dance nights, cruises</li><li>Scuba, jet ski, parasailing</li></ul><a class="btn btn--turq" href="#reserve">Choose Paradise</a></div>
+      </div>
+    </div>
+    <div class="opt-count" id="optCount"><span>1</span>/4</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about__grid">
+    <div class="about__media">
+      <div class="media" id="aboutPh"><img data-un="1776761420412-e6451f458162" alt="Aerial view of a tropical resort with pools and beach"></div>
+      <div class="inset"><div class="media"><img data-un="1557750505-e7b4d1c40410" alt="Infinity pool at sunrise"></div></div>
+    </div>
+    <div>
+      <span class="caps reveal" style="color:var(--gold)">Why Elite Vacations?</span>
+      <h2 class="h2 reveal" style="margin-top:20px">Meet in person, <em>in paradise</em></h2>
+      <hr class="rule">
+      <p class="reveal">We created Elite Vacations to give millions of singles around the world an amazing and unique opportunity: to meet each other at elegant, fun vacations at the world's best luxury resorts, <strong>and not get lost in the crowd of newlyweds, couples and families with screaming kids.</strong></p>
+      <p class="reveal">Several clubs and hotels in the world cater to singles, and they are always in the same location. No other hotel, club or resort offers anything close to the Paradise Club experience. We occupy <strong>the entire international resort</strong>: astonishing settings, amazing service and amazing food, dedicated totally to Paradise Club.</p>
+      <blockquote class="quote reveal">Instead of spending long hours, days and months on dating websites without results, meet in person.</blockquote>
+      <p class="reveal">All-inclusive food and drinks, great and exciting events and activities, each other's company, and the spectacular settings of tropical islands and exciting countries. You may find someone to share a wonderful, romantic vacation with, or you may even find your soulmate. Regardless, <strong>Paradise Club will give you a vacation that is truly unforgettable.</strong></p>
+      <p class="reveal">This vacation is the dream of every man and woman in the world. Paradise Club exists for you to make that dream real. Join us in finding how life was truly meant to be lived. <strong>Join us in Paradise…</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS: horizontal full-height -->
+<section class="events" id="events">
+  <div class="events__head">
+    <div><span class="caps" style="color:var(--gold)">Events</span><h2 class="h2" style="margin-top:18px">Miss Paradise, Tango Night, <em>the Sunset Cruise</em></h2></div>
+    <p class="lead">Whether you meet someone special at the Miss Paradise Contest, Tango Night or on the Sunset Cruise, the pleasure will be both of yours to share. We're certain you'll have the most amazing vacation of your life.</p>
+  </div>
+  <div class="ev-pin" id="evPin"><div class="ev-track" id="evTrack">
+    <article class="evp"><div class="media"><img data-un="1767962270437-a906d15d98f5" alt="Woman wearing a crown and sash"></div><span class="evp__n">I</span><div class="evp__c"><span class="caps">Beauty pageant</span><h3>Miss Paradise Contest</h3><p>The signature night of every Paradise Club week, crowned in front of all our guests.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1554882195-8cf792f9a571" alt="Model on a catwalk"></div><span class="evp__n">II</span><div class="evp__c"><span class="caps">Broadcast on YouTube</span><h3>International Modeling Competition</h3><p>A world modeling competition staged at the resort and broadcast on YouTube.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1747172556306-5ec4ef189070" alt="Contestant on stage"></div><span class="evp__n">III</span><div class="evp__c"><span class="caps">$10,000 to the winner</span><h3>Paradise Bikini Contest</h3><p>On the beach at every Paradise Club location, with prizes and sponsors.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1744280054687-e8b72c1ff390" alt="Couple dancing tango with a live orchestra"></div><span class="evp__n">IV</span><div class="evp__c"><span class="caps">Latin dance night</span><h3>Tango Night</h3><p>Tango, salsa and bachata with live music under the stars.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1531429957-9e7c26e39c84" alt="Sailboat at sea near the shore"></div><span class="evp__n">V</span><div class="evp__c"><span class="caps">Golden hour</span><h3>The Sunset Cruise</h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1734421989465-47be92f9f126" alt="Performers on a stage"></div><span class="evp__n">VI</span><div class="evp__c"><span class="caps">Live entertainment</span><h3>Talent Shows</h3><p>Many of our ladies perform as Paradise Club entertainers: dancers, singers and other talents.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1546484458-6904289cd4f0" alt="People in a swimming pool"></div><span class="evp__n">VII</span><div class="evp__c"><span class="caps">Every night</span><h3>Pool &amp; Beach Parties</h3><p>All-inclusive food and drinks, music, and 200 guests who came to meet each other.</p></div></article>
+  </div></div>
+</section>
+
+<!-- PRIZE -->
+<section class="screen prize" id="prize">
+  <div class="media"><video data-mx="22559" data-poster="1612872087720-bb876e2e67d1" muted loop playsinline preload="none"></video></div>
+  <div class="prize__c">
+    <span class="caps" style="color:var(--gold)">Paradise Bikini Contest · every location</span>
+    <div class="prize__amt" id="prizeAmt" aria-label="$10,000">$10,000</div>
+    <p class="lead">to the winner. Contests with prizes and sponsors, streamed live alongside the International Modeling Competition.</p>
+    <div class="prize__row">
+      <div><b>On the beach</b><span>Judged in front of the whole resort</span></div>
+      <div><b>Streamed live</b><span>YouTube and social media</span></div>
+      <div><b>Sponsors</b><span><a href="#reserve" data-tab="sponsor" style="color:var(--turq)">Become a sponsor →</a></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVITE -->
+<section class="invite" id="invite">
+  <div class="invite__media"><div class="media"><video data-mx="44495" data-poster="1507525428034-b723cf961d3e" muted loop playsinline preload="none"></video></div></div>
+  <div class="invite__txt">
+    <span class="caps reveal" style="color:var(--gold)">For gentlemen</span>
+    <h2 class="h2 reveal" style="margin-top:18px">Invite a girl <em>to Paradise</em></h2>
+    <hr class="rule">
+    <p class="reveal">You've been communicating for quite some time by email, on Facebook or on dating sites with a girl who might live in Ukraine, Brazil, Russia, North America or anywhere else in the world. You can't have a lovely dinner, take her to the movies or go for a romantic walk on the beach, because all you do is sit in front of a computer or iPhone dreaming of meeting her.</p>
+    <p class="reveal"><strong style="font-weight:400;color:var(--ink)">Here is your chance.</strong> Invite her to spend six amazing nights and seven days at an unforgettable vacation in one of the world's premier destinations. Even if she's your girlfriend and you've known her for years, you're both welcome.</p>
+    <blockquote class="quote reveal">And if you don't click? There will be 99 other amazing women at Paradise Club.</blockquote>
+  </div>
+</section>
+<section class="pk" id="packages">
+  <div class="pk__grid">
+    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1520115736066-2190b58a4b9e" alt="White yacht on the water"></div></div><div class="pk__b"><span class="caps">Package I</span><h3>Gentleman</h3><ul><li>7 days / 6 nights, all-inclusive food &amp; drinks</li><li>Every event: Miss Paradise, Tango Night, the Sunset Cruise</li><li>Scuba, snorkeling, jet ski, parasailing, horseback riding</li><li>A resort shared only with 200 elite singles</li></ul><a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Gentleman">Request pricing</a></div></article>
+    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1507525428034-b723cf961d3e" alt="Beach at golden hour"></div></div><div class="pk__b"><span class="caps">Package II</span><h3>Gentleman &amp; Lady</h3><ul><li>Everything in Gentleman</li><li>Invite the girl you've been talking to online</li><li>You cover her trip; we arrange her flight and stay</li><li>Meet in person, without the pressure of a first date</li></ul><a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Gentleman + Lady">Invite her</a></div></article>
+    <article class="pk__item reveal"><div class="pk__img"><div class="media"><img data-un="1765999906700-2d4dfd392966" alt="Pool overlooking the ocean"></div></div><div class="pk__b"><span class="caps">Package III</span><h3>Paradise Villa</h3><ul><li>All the perks of Paradise Club</li><li>A grandiose private mansion in our Caribbean resort</li><li>The high life by day, a private getaway by night</li><li>Very limited availability</li></ul><a class="btn btn--dark" href="#villa">Discover the villa</a></div></article>
+  </div>
+</section>
+
+<!-- PAGEANT -->
+<section class="screen pageant" id="pageant">
+  <div class="media" id="pageantPh"><img data-un="1762430815537-e140755eedf9" alt="Model on a runway with an audience"></div>
+  <div class="pageant__c">
+    <div>
+      <span class="caps reveal" style="color:var(--gold)">International Talent &amp; Beauty Pageant</span>
+      <h2 class="h2 reveal" style="margin-top:18px">The road <em>to Paradise</em></h2>
+      <p class="lead reveal" style="opacity:.9;margin-top:24px">Thousands of ladies around the world are invited to take part. The winners, 100 beautiful and talented single ladies, are invited to Paradise Club for seven days and six nights at a luxury international resort.</p>
+      <a class="btn btn--light reveal" href="#reserve" data-tab="lady" style="margin-top:20px">Enter the pageant</a>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><b>I</b><div><h3>Thousands invited</h3><p>Ladies around the world are invited to the Paradise Club International Talent &amp; Beauty Pageant.</p></div></li>
+      <li class="reveal"><b>II</b><div><h3>Live in Kyiv</h3><p>Our event coordinators in Kyiv host a live competition for ladies from Ukraine and neighbouring countries, viewed on YouTube and social media.</p><div class="tags"><span>YouTube</span><span>Instagram</span><span>Facebook</span><span>TikTok</span></div></div></li>
+      <li class="reveal"><b>III</b><div><h3>Talent counts</h3><p>Many of our ladies perform as Paradise Club entertainers, so judges look for talent as well as beauty.</p><div class="tags"><span>Dancers</span><span>Singers</span><span>Models</span></div></div></li>
+      <li class="reveal"><b>IV</b><div><h3>Fly to Paradise, free</h3><p>The 100 winners receive airfare and the all-inclusive resort absolutely free of charge.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- DESTINATIONS: full-screen slider -->
+<section class="dest" id="destinations">
+  <div id="dslides"></div>
+  <div class="dest__c">
+    <div class="dest__txt">
+      <span class="caps" id="destRegion">Destinations</span>
+      <h2 class="dest__name"><span class="line"><span id="destName">Cancún</span></span></h2>
+      <p class="dest__body" id="destBody"></p>
+      <div class="dest__nav"><button id="dPrev" aria-label="Previous destination">←</button><span class="dest__count" id="destCount">01 / 16</span><button id="dNext" aria-label="Next destination">→</button></div>
+    </div>
+    <ul class="dest__list" id="destList"></ul>
+  </div>
+  <div class="dest__prog" id="destProg"></div>
+</section>
+
+<!-- VILLA -->
+<section class="screen villa" id="villa">
+  <div class="media" id="villaPh"><img data-un="1783101514857-7e50266c60b8" alt="Infinity pool overlooking the ocean"></div>
+  <div class="villa__panel reveal">
+    <span class="caps">Paradise Villa</span>
+    <h2 class="h2" style="margin-top:16px">The high life by day. <em>A mansion by night.</em></h2>
+    <hr class="rule">
+    <p>Paradise Villa is a highly exclusive villa in our Caribbean resort, for the gentleman who seeks to enjoy the whirlwind of the high life of Paradise in the day, but wants to come home to a beautiful and grandiose private mansion at night.</p>
+    <p>This exclusive package gives you all the perks of Paradise Club with the freedom of a private getaway.</p>
+    <a class="btn btn--dark" href="#reserve" data-tab="gent" data-pkg="Paradise Villa" style="margin-top:8px">Enquire about the villa</a>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section class="safety" id="safety">
+  <span class="caps reveal" style="color:var(--gold)">Your safety</span>
+  <h2 class="h2 reveal" style="margin-top:18px;max-width:18ch">Feel secure about <em>the people you meet</em></h2>
+  <p class="lead reveal" style="color:var(--ink-2);margin-top:22px">In today's society, it's important to consider the safety of our members.</p>
+  <div class="safe-grid">
+    <div class="reveal"><b>I</b><h3>Met in person</h3><p>We meet everyone in person and conduct background checks where applicable.</p></div>
+    <div class="reveal"><b>II</b><h3>Dedicated security</h3><p>A professional security company works in addition to the hotel's own security.</p></div>
+    <div class="reveal"><b>III</b><h3>A private resort</h3><p>The entire resort is dedicated to Paradise Club. Only our 200 guests and staff.</p></div>
+  </div>
+</section>
+
+<!-- FILMS -->
+<section class="films" id="films">
+  <span class="caps reveal" style="color:var(--gold)">Paradise Club Preview</span>
+  <h2 class="h2 reveal" style="margin-top:18px">Paradise <em>on film</em></h2>
+  <button class="film-main reveal" id="filmMain" type="button" aria-label="Play the Paradise Club preview"><img alt="" id="filmMainImg"><span class="play">Play</span><span class="film-label caps">Paradise Club Preview</span></button>
+  <div class="film-tabs" role="tablist" aria-label="Video libraries"><button type="button" role="tab" aria-selected="true" data-lib="0" id="ft0">Video Library 1</button><button type="button" role="tab" aria-selected="false" data-lib="1" id="ft1">Video Library 2</button></div>
+  <div class="film-grid" id="filmGrid"></div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <span class="caps reveal" style="color:var(--gold)">Gallery</span>
+  <h2 class="h2 reveal" style="margin-top:18px">Fun stuff <em>has begun</em></h2>
+  <div class="filters" id="filters" role="group" aria-label="Filter gallery"></div>
+  <div class="gal" id="gal"></div>
+</section>
+
+<!-- RESERVE -->
+<section class="screen reserve" id="reserve">
+  <div class="media"><video data-mx="44499" data-poster="1596669500506-f036c9f37692" muted loop playsinline preload="none"></video></div>
+  <div class="reserve__c">
+    <div>
+      <span class="caps" style="color:var(--gold)">Reservations</span>
+      <h2 class="h2" style="margin-top:18px">We look forward to having you join us <em>in Paradise</em></h2>
+      <hr class="rule">
+      <p class="lead" style="opacity:.9">Confidential inquiries and further information can be made by phone, or send the form and our team will reply personally.</p>
+      <a class="phone" href="tel:18776777795">1-877-677-7795</a>
+      <p class="caps" style="opacity:.75;margin-top:22px">Every other month · dates announced to applicants first</p>
+    </div>
+    <div class="form" id="formWrap">
+      <div class="tabs" role="tablist" aria-label="I am applying as"><button type="button" role="tab" aria-selected="true" data-mode="gent" id="tab-gent">Gentleman</button><button type="button" role="tab" aria-selected="false" data-mode="lady" id="tab-lady">Lady · Pageant</button><button type="button" role="tab" aria-selected="false" data-mode="sponsor" id="tab-sponsor">Sponsor</button></div>
+      <!-- To receive submissions: set data-endpoint to your Formspree / Getform URL -->
+      <form id="applyForm" data-endpoint="" novalidate>
+        <input type="hidden" name="type" id="f-type" value="gentleman">
+        <div class="f"><label for="f-name">Full name</label><input id="f-name" name="fullname" required autocomplete="name"></div>
+        <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="f"><label for="f-country">Country</label><input id="f-country" name="country" autocomplete="country-name"></div>
+        <div class="f"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="f gent-only"><label for="f-package">Package</label><select id="f-package" name="package"><option>Gentleman</option><option>Gentleman + Lady</option><option>Paradise Villa</option></select></div>
+        <div class="f gent-only"><label for="f-dest">Destination</label><select id="f-dest" name="destination"><option>Any / next event</option></select></div>
+        <div class="f lady-only"><label for="f-talent">Talent</label><select id="f-talent" name="talent"><option>Modeling</option><option>Dance</option><option>Singing</option><option>Other performance</option></select></div>
+        <div class="f lady-only"><label for="f-social">Instagram / portfolio</label><input id="f-social" name="social" type="url" placeholder="https://"></div>
+        <div class="f f--full"><label for="f-msg" id="f-msg-label">Anything we should know? Tell us if you're inviting a lady.</label><textarea id="f-msg" name="message"></textarea></div>
+        <label class="check" for="f-age"><input type="checkbox" id="f-age" name="adult" required> I confirm I am 18 or older and agree to be contacted about Paradise Club.</label>
+        <div style="grid-column:1/-1"><button class="btn btn--dark" type="submit"><span id="f-submit-t">Send application</span></button></div>
+        <p id="f-err" style="grid-column:1/-1;margin:0;color:#b3402a;font-size:.9rem" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="foot__big">Join us in Paradise</p>
+  <p class="caps" style="margin-top:22px;opacity:.75">The only vacation for singles in the world</p>
+  <div class="foot__row">
+    <span>© <span id="yr">2026</span> My Paradise Club. All rights reserved. Paradise Club is a subsidiary of Diversified Global Ventures, Corp.</span>
+    <nav aria-label="Footer"><a href="#experiences">Experiences</a><a href="#destinations">Destinations</a><a href="#films">Films</a><a href="#reserve">Reserve</a><a href="tel:18776777795">1-877-677-7795</a></nav>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Viewer">
+  <div class="lb__top"><span class="caps" id="lbCap"></span><button class="lb__x" id="lbClose" aria-label="Close">✕</button></div>
+  <div class="lb__stage" id="lbStage"></div>
+  <div class="lb__nav" id="lbNav"><button id="lbPrev" aria-label="Previous">←</button><button id="lbNext" aria-label="Next">→</button></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+"use strict";
+var body=document.body;body.classList.remove("no-js");
+var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduced)body.classList.add("reduced");
+var hasGsap=typeof window.gsap!=="undefined";
+var $=function(s,c){return (c||document).querySelector(s);},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));};
+var mobile=window.matchMedia("(max-width: 760px)").matches;
+$("#yr").textContent=new Date().getFullYear();
+
+/* ---------- media sources ---------- */
+// Unsplash (free licence) photos and Mixkit (free licence) videos, plus the club's own Wix photos and YouTube films
+function UN(id,w){return "https://images.unsplash.com/photo-"+id+"?auto=format&fit=crop&w="+(w||2000)+"&q=80";}
+function MX(id,q){return "https://assets.mixkit.co/videos/"+id+"/"+id+"-"+q+".mp4";}
+function WIX(id,w,h,ext,mode){ext=ext||"jpg";mode=mode||"fill";var f=id+"."+ext;return "https://static.wixstatic.com/media/8feb4d_"+f+"/v1/"+mode+"/w_"+w+",h_"+h+(mode==="fill"?",al_c":"")+",q_85/8feb4d_"+f;}
+function nf(el){var m=el.closest(".media,.gi,.fthumb,.film-main");if(m)m.classList.add("nf");}
+
+$$("img[data-un]").forEach(function(im){im.decoding="async";if(!im.closest(".hero"))im.loading="lazy";im.onerror=function(){nf(im);};im.src=UN(im.dataset.un,im.closest(".evp,.pk__img,.inset")?1200:2000);});
+$$("video[data-mx]").forEach(function(v){v.muted=true;v.setAttribute("muted","");if(v.dataset.poster)v.poster=UN(v.dataset.poster,1600);});
+var logo=$("#logo");logo.onerror=function(){logo.style.display="none";};logo.src=WIX("45f0be61d005edb2ecb7ee8c2085ca7c",120,120,"png","fit");
+
+// load videos when near the viewport; play only when visible
+function loadVideo(v){if(v.dataset.loaded)return;v.dataset.loaded="1";var id=v.dataset.mx;[mobile?"360":"720",mobile?"720":"360"].forEach(function(q){var s=document.createElement("source");s.src=MX(id,q);s.type="video/mp4";v.appendChild(s);});v.load();}
+function playV(v){loadVideo(v);var p=v.play();if(p&&p.catch)p.catch(function(){});}
+function pauseV(v){if(!v.paused)v.pause();}
+var vids=$$("video[data-mx]");
+if("IntersectionObserver" in window){
+  var near=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)loadVideo(e.target);});},{rootMargin:"150% 0px"});
+  var vis=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(v.closest(".slide"))return;if(e.isIntersecting)playV(v);else pauseV(v);});},{threshold:.05});
+  vids.forEach(function(v){near.observe(v);vis.observe(v);});
+}else vids.forEach(playV);
+playV($("#heroMedia video"));
+
+/* ---------- menu ---------- */
+var menuBtn=$("#menuBtn"),menuMedia=$("#menuMedia");
+$$("#menuLinks a").forEach(function(a,i){var im=new Image();im.alt="";im.loading="lazy";im.onerror=function(){};im.src=UN(a.dataset.img,1400);im.style.opacity=i?0:1;menuMedia.appendChild(im);
+  a.addEventListener("mouseenter",function(){$$("img",menuMedia).forEach(function(x,k){x.style.opacity=k===i?1:0;});});});
+function toggleMenu(o){body.classList.toggle("menu-open",o);menuBtn.setAttribute("aria-expanded",o?"true":"false");menuBtn.querySelector("span").textContent=o?"Close":"Menu";lockScroll(o);
+  if(o&&hasGsap&&!reduced)gsap.fromTo("#menuLinks a",{y:60,opacity:0},{y:0,opacity:.75,stagger:.05,duration:.9,delay:.35,ease:"expo.out",clearProps:"transform"});}
+menuBtn.addEventListener("click",function(){toggleMenu(!body.classList.contains("menu-open"));});
+$$("#menuLinks a").forEach(function(a){a.addEventListener("click",function(){toggleMenu(false);});});
+
+/* ---------- destinations ---------- */
+var D=[
+ {n:"Cancún",r:"Mexico · Caribbean",img:"1602088113235-229c19758e9f",t:"A tropical paradise that remains one of the world's top destinations, with great weather, pumping nightlife and some of the coolest activities in Mexico. Home to the world's second-largest barrier reef, Cancún is ideal for scuba diving and snorkeling."},
+ {n:"Playa del Carmen",r:"Mexico · Riviera Maya",img:"1640617547871-15e4fb41d0c5",t:"Just south of Cancún on the Riviera Maya: soft white-sand beaches, the lively Quinta Avenida, cenotes for swimming, and a short ferry to the reefs of Cozumel."},
+ {n:"Puerto Vallarta",r:"Mexico · Pacific",img:"1637892652226-76f8bbd184dd",t:"Mexico's prettiest resort town is also one of its most diverse: the cobblestone streets of Old Vallarta, the yacht marina, and from Costalegre to the Riviera Nayarit, miles of sandy beaches, stellar restaurants and lively nightclubs."},
+ {n:"Bahamas",r:"Nassau · Caribbean",img:"1559956144-83a135c9872e",t:"Mirages of powdery white sand against an indigo sea, and leaning palms rustling in the cooling trade breeze. Secluded, untouched beaches, and stunning beaches with activities galore within a sun-kissed arm's reach."},
+ {n:"Jamaica",r:"Caribbean",img:"1437719417032-8595fd9e9dc6",t:"One of the Caribbean's most iconic islands: rainforest, soaring mountains and dramatic coastlines. The scenery is breathtaking, the cuisine is scrumptious, the music is pulsating and the people are unforgettable."},
+ {n:"St Lucia",r:"Eastern Caribbean",img:"1706645616928-1902d9a6b929",t:"Greeted by the Piton Mountains rising majestically from the surf, fringed by coral reefs and swaying palms. Exquisite reefs for divers and snorkelers, and trade winds for kite-boarding and windsurfing."},
+ {n:"Dominican Republic",r:"Caribbean",img:"1705507972578-78537a2dda73",t:"Vast coral reefs, waterfalls, jungles and secluded islands. Raft the Río Yaque del Norte, then snorkel, dive, kayak, kite-board, sail and surf along the coast."},
+ {n:"Costa Rica",r:"Central America",img:"1536709017021-ce8f99c17e38",t:"Exquisite beaches lead up to fiery volcanoes through some of the most verdant forest in the world. On the Pacific Ring of Fire, remarkably different from coast to coast."},
+ {n:"Panamá",r:"Central America",img:"1632505702897-cc41b0ba3b64",t:"Two oceans, mountains and rainforest, native cultures and vibrant urban life in a single week. Panamá City is a modern, sophisticated metropolis of commerce, arts, fashion and dining."},
+ {n:"Hawaii",r:"Pacific",img:"1505852679233-d9fd70aff56d",t:"Good weather, magnificent views, blue waters, hula and exquisite cuisine. Kauai's wild beauty and the beaches of the Coconut Coast are perfect for a romantic escapade."},
+ {n:"Málaga · Costa del Sol",r:"Spain · Andalusia",img:"1512753360435-329c4535a9a7",t:"Andalusia's city of culture, its 'mile of art' compared to Madrid and its dining to Barcelona, crowned by the 11th-century Gibralfaro castle above the Costa del Sol."},
+ {n:"Barcelona",r:"Spain · Catalonia",img:"1599484233778-5bdc6b69bbe3",t:"Striking architecture, world-class museums and the rhythms of Catalonia. A beachside metropolis of tapas bars and Gaudí, from hillside parks to public buildings."},
+ {n:"Monaco",r:"Côte d'Azur",img:"1595138320174-a64d168e9970",t:"Pristine blue waters, warm weather and high rollers. Beautiful, chic, great weather and even better food."},
+ {n:"Capri",r:"Italy · Bay of Naples",img:"1559509354-1c00ed744bcb",t:"A breathtaking island whose seductive charms have drawn visitors for thousands of years, from the colourful harbour of Marina Grande up to the famous Piazzetta."},
+ {n:"Amalfi Coast",r:"Italy · Campania",img:"1612698093158-e07ac200d44e",t:"Pastel villages such as Positano, Amalfi and Ravello cling to the cliffs above the Tyrrhenian Sea. Lemon groves, cliffside terraces and boat trips to hidden coves."},
+ {n:"Greek Islands",r:"Aegean · Ionian",img:"1570077188670-e3a8d69ac5ff",t:"1,400 islands, 230 of them inhabited, among the Mediterranean's most beautiful assets, with some of the most picturesque seascapes on Earth."}
+];
+var dsl=$("#dslides"),dList=$("#destList"),dSel=$("#f-dest"),dIdx=0,dTimer=null;
+D.forEach(function(d,i){var s=document.createElement("div");s.className="dslide"+(i?"":" on");s.innerHTML='<div class="media"><img alt="'+d.n+'"></div>';var im=$("img",s);im.loading=i<2?"eager":"lazy";im.onerror=function(){nf(im);};im.src=UN(d.img,2200);dsl.appendChild(s);
+  var li=document.createElement("li");li.innerHTML='<button type="button">'+d.n+"</button>";$("button",li).addEventListener("click",function(){goDest(i,true);});dList.appendChild(li);
+  var o=document.createElement("option");o.textContent=d.n;dSel.appendChild(o);});
+function setDestText(i){var d=D[i];$("#destRegion").textContent=d.r;$("#destName").textContent=d.n;$("#destBody").textContent=d.t;$("#destCount").textContent=String(i+1).padStart(2,"0")+" / "+D.length;$$("button",dList).forEach(function(b,k){b.classList.toggle("on",k===i);});}
+setDestText(0);
+function goDest(i,user){i=(i+D.length)%D.length;if(i===dIdx)return;var prev=$$(".dslide")[dIdx],next=$$(".dslide")[i];dIdx=i;
+  if(hasGsap&&!reduced){gsap.set(next,{visibility:"visible",opacity:1,zIndex:2,clipPath:"inset(0 0 0 100%)"});gsap.set(prev,{zIndex:1});
+    gsap.to(next,{clipPath:"inset(0 0 0 0%)",duration:1.4,ease:"expo.inOut",onComplete:function(){prev.classList.remove("on");gsap.set(prev,{visibility:"hidden",opacity:0});next.classList.add("on");}});
+    gsap.fromTo($("img",next),{scale:1.18},{scale:1.04,duration:8,ease:"power1.out"});
+    gsap.to("#destName",{yPercent:110,duration:.5,ease:"expo.in",onComplete:function(){setDestText(i);gsap.fromTo("#destName",{yPercent:-110},{yPercent:0,duration:.9,ease:"expo.out"});}});
+    gsap.fromTo("#destBody",{opacity:1},{opacity:0,duration:.4,yoyo:true,repeat:1});
+  }else{prev.classList.remove("on");next.classList.add("on");setDestText(i);}
+  restartDestTimer();}
+$("#dPrev").addEventListener("click",function(){goDest(dIdx-1,true);});$("#dNext").addEventListener("click",function(){goDest(dIdx+1,true);});
+var destVisible=false;
+function restartDestTimer(){if(dTimer)dTimer.kill&&dTimer.kill();if(!hasGsap||reduced)return;gsap.set("#destProg",{width:0});dTimer=gsap.to("#destProg",{width:"100%",duration:7,ease:"none",paused:!destVisible,onComplete:function(){goDest(dIdx+1);}});}
+var tsx=0;$("#destinations").addEventListener("touchstart",function(e){tsx=e.touches[0].clientX;},{passive:true});$("#destinations").addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-tsx;if(Math.abs(dx)>60)goDest(dIdx+(dx<0?1:-1),true);});
+
+/* ---------- films ---------- */
+var VIDEOS=[["d_faWr5x7q4","ihoFIdzpIVg","FNEnHMq5_E8","dm_3_Z2Ewoo","veggdJvKju4","LElWY7PQDKw","gv15Uq9nXtE","5_c-wQWr7_g","2REyxTEWNO4"],["f4q029GmPvE","MvjNd-YnmZc","ILPYZoB6G2s","W4fvljse3ew","IysmJmrA8js","iJxEsCc6BGI","skRJYSNvYx0","lG2eh__ck7o","PUhTH816ysc"]];
+var fmImg=$("#filmMainImg");fmImg.onerror=function(){nf(fmImg);};fmImg.src="https://i.ytimg.com/vi/lG2eh__ck7o/maxresdefault.jpg";
+$("#filmMain").addEventListener("click",function(){openVideo("lG2eh__ck7o","Paradise Club Preview");});
+var fg=$("#filmGrid");
+function renderFilms(lib,anim){fg.innerHTML="";VIDEOS[lib].forEach(function(id,i){var lbl="Library "+(lib+1)+" · Film "+(i+1);var b=document.createElement("button");b.type="button";b.className="fthumb";b.setAttribute("aria-label","Play "+lbl);var im=new Image();im.alt="";im.loading="lazy";im.onerror=function(){b.classList.add("nf");};im.src="https://i.ytimg.com/vi/"+id+"/hqdefault.jpg";b.appendChild(im);b.insertAdjacentHTML("beforeend","<span>"+lbl+"</span>");b.addEventListener("click",function(){openVideo(id,lbl);});fg.appendChild(b);});
+  if(anim&&hasGsap&&!reduced)gsap.from(fg.children,{y:30,opacity:0,stagger:.05,duration:.8,ease:"expo.out"});}
+renderFilms(0);
+$$(".film-tabs button").forEach(function(b){b.addEventListener("click",function(){$$(".film-tabs button").forEach(function(z){z.setAttribute("aria-selected","false");});b.setAttribute("aria-selected","true");renderFilms(+b.dataset.lib,true);});});
+
+/* ---------- gallery (club's own photos from the Wix site) ---------- */
+var G=[["f98334123a6e5543dbcd694307e07894","jpg","Resort",1.5],["537a8090bf9c67a93abc4889f0fbdfc6","jpg","Resort",1.33],["f756054f64ae562045797743cf962659","jpg","Resort",1.33],["18c84fdcdc59c9ae8b0f0eaa7a81565e","jpg","Resort",1.6],["593cf5fe2d44f8fd7c41448cd0246bc1","jpg","Resort",2.1],
+ ["9e538e887776df2dc0e5bbc25721b7b9","jpg","Destinations",1.85],["3582a78385243fde4620213d16aae98d","jpg","Destinations",1.33],["a8f3960d70a792e131180c8aa22e393f","jpg","Destinations",1.85],["8acf707f06d991f3ae5b70a4f08d2852","jpg","Destinations",1.33],["4a684b51fa0a72f83569017e9501e056","jpg","Destinations",1.85],["7a2edd402f3a2e3a0d0147a8d58ab6fe","jpg","Destinations",1.33],
+ ["d28a508c8f3f93598b8bcb271c57ba7d","jpg","Events",1.85],["199db79aaab610022d370aa9e07dc735","jpg","Events",1.33],["fd9c9f4bec6bd98eb041367d70d791c6","jpg","Events",1.85],
+ ["dc9feda3dd646abc000b4bc6d02df776","jpg","Activities",1.85],["594086839dc0c510902f7b34f8fb7b45","jpg","Activities",1.33],["368c2b2b4f9ab6411444a95b31f18606","jpg","Activities",1.85],["84e6262f6ae5fabc9af86bbcb73b6734","png","Activities",2],
+ ["152a80b6d9b2627cb884fda36df6eb85","jpg","Models",1.5],["fe23ee8afddeee01f04f7e8aa96f2344","jpg","Models",.66],["89011149e3828beebdbde02de2386ec1","jpg","Models",.66],["3dbd6db4022573271d8c7c9b7799b192","jpg","Models",.62],["89b5ab1901599c64f2511619e604cbbb","jpg","Models",1.85],["a89f17aa5c523eed6ba60e064edeb1d1","png","Models",.49],
+ ["f334cb24218641b35087659ecdb172a6","jpg","Moments",1.33],["3e135754fa5e4bea30d6bcd69a15daf3","jpg","Moments",.75],["041046d68a82892f0df839271e99c51f","jpg","Moments",1],["853875811352cfb5b7d57fd3f8f14469","jpg","Moments",1.5],["f06c920b7adea1a354840f1d6d91ad22","jpg","Moments",.8],["4ae82633fff41f2bcff665fdae2ec0c8","jpg","Moments",1.33],["dc8d79bd4258a90eaed73d1d489dbb52","jpg","Moments",.75],["9e884086ae88f9f9ec2ef5de7d0675b0","jpg","Moments",1],["d0838d1913c688deea9cee540a9bf59f","jpg","Moments",1.5],["8dd479c34b8bf77f0b5c85b842144e42","jpg","Moments",.8],["930dab0115d85a5c8d1024ebe5377299","jpg","Moments",1.33],["0c80c801b8fa75bde526c50fa61d51cf","jpg","Moments",.75],["9f0ff7cbc538c1c51fddb05110fe4c38","jpg","Moments",1],["9e1a0052df172b8f42b1646c4ec25896","jpg","Moments",1.5],["5ea1d5fa13341180db0d2ee209da9e7b","jpg","Moments",.8],["c17cba160f881a8d5d7bddc916661037","jpg","Moments",1.33],["290abd7319cb62e74a817728b2c0155e","jpg","Moments",.75],["d327ef663b816f656b8ca6791d465836","jpg","Moments",1],["499c10701d6496970fc0583372720649","jpg","Moments",1.5],["97c8631d677ff9c614bdf4441a0eafd5","jpg","Moments",.8],["1f35e4d16da68d7557063af9edb27f37","png","Moments",1],["27ce4f15619ba39a1973347adf1fabde","png","Moments",1]];
+var gal=$("#gal"),filters=$("#filters");
+G.forEach(function(x,i){var b=document.createElement("button");b.type="button";b.className="gi"+(x[1]==="png"?" png":"");b.dataset.cat=x[2];b.setAttribute("aria-label","Open "+x[2]+" photo");var ph=document.createElement("div");ph.className="ph";ph.style.setProperty("--ar",x[3]);var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.loading="lazy";im.onerror=function(){b.classList.add("nf");};im.src=x[1]==="png"?WIX(x[0],600,600,"png","fit"):WIX(x[0],600,Math.round(600/x[3]));ph.appendChild(im);b.appendChild(ph);b.addEventListener("click",function(){openLB(i);});gal.appendChild(b);});
+["All","Resort","Destinations","Events","Activities","Models","Moments"].forEach(function(c,i){var b=document.createElement("button");b.type="button";b.setAttribute("aria-pressed",i?"false":"true");b.textContent=c;b.addEventListener("click",function(){$$("button",filters).forEach(function(z){z.setAttribute("aria-pressed","false");});b.setAttribute("aria-pressed","true");var items=$$(".gi",gal);items.forEach(function(it){it.classList.toggle("hide",c!=="All"&&it.dataset.cat!==c);});if(hasGsap&&!reduced)gsap.fromTo(items.filter(function(it){return !it.classList.contains("hide");}),{opacity:0,y:30},{opacity:1,y:0,stagger:.03,duration:.7,ease:"expo.out",onComplete:function(){if(window.ScrollTrigger)ScrollTrigger.refresh();}});});filters.appendChild(b);});
+
+/* ---------- lightbox ---------- */
+var lb=$("#lb"),stage=$("#lbStage"),lbIdx=0,lbMode="img",lastFocus=null;
+function lockScroll(on){document.documentElement.style.overflow=on?"hidden":"";if(window.__lenis){if(on)window.__lenis.stop();else window.__lenis.start();}}
+function showLB(i){lbIdx=(i+G.length)%G.length;var x=G[lbIdx];stage.innerHTML="";var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.onerror=function(){stage.innerHTML="<p>This photo is hosted on Wix and could not load here.</p>";};im.src=x[1]==="png"?WIX(x[0],1400,1400,"png","fit"):WIX(x[0],1900,1900,"jpg","fit");stage.appendChild(im);$("#lbCap").textContent=x[2]+" · "+(lbIdx+1)+" / "+G.length;if(hasGsap&&!reduced)gsap.fromTo(im,{opacity:0,scale:.97},{opacity:1,scale:1,duration:.7,ease:"expo.out"});}
+function openLB(i){lbMode="img";$("#lbNav").hidden=false;lastFocus=document.activeElement;showLB(i);lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
+function openVideo(id,label){lbMode="vid";$("#lbNav").hidden=true;lastFocus=document.activeElement;stage.innerHTML='<div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="'+label+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>';$("#lbCap").innerHTML=label+' · <a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener" style="color:var(--gold)">Open on YouTube</a>';lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
+function closeLB(){lb.classList.remove("open");stage.innerHTML="";lockScroll(false);if(lastFocus)lastFocus.focus({preventScroll:true});}
+$("#lbClose").addEventListener("click",closeLB);$("#lbPrev").addEventListener("click",function(){showLB(lbIdx-1);});$("#lbNext").addEventListener("click",function(){showLB(lbIdx+1);});
+stage.addEventListener("click",function(e){if(e.target===stage)closeLB();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(lb.classList.contains("open"))closeLB();else if(body.classList.contains("menu-open"))toggleMenu(false);}if(lb.classList.contains("open")&&lbMode==="img"){if(e.key==="ArrowRight")showLB(lbIdx+1);if(e.key==="ArrowLeft")showLB(lbIdx-1);}});
+
+/* ---------- nav ---------- */
+var nav=$("#nav"),lastY=0;
+window.addEventListener("scroll",function(){var y=window.scrollY;nav.classList.toggle("hide",y>lastY+4&&y>300&&!body.classList.contains("menu-open"));if(y<lastY-4)nav.classList.remove("hide");lastY=y;},{passive:true});
+function setNavTone(){var y=window.innerHeight*.06,els=document.elementsFromPoint(window.innerWidth/2,y+40);var light=els.some(function(el){return el.matches&&el.matches(".interlude,.about,.pk,.safety,.gallery,.invite");});nav.classList.toggle("solid",light);}
+window.addEventListener("scroll",setNavTone,{passive:true});
+
+/* ---------- form ---------- */
+var form=$("#applyForm"),fw=$("#formWrap"),modes={gent:["gentleman","Anything we should know? Tell us if you're inviting a lady.","Send application"],lady:["lady-pageant","Tell us about yourself and your talent.","Enter the pageant"],sponsor:["sponsor","Your company and what you'd like to sponsor.","Contact partnerships"]};
+function setMode(m){$$(".tabs button",fw).forEach(function(b){b.setAttribute("aria-selected",b.dataset.mode===m?"true":"false");});fw.classList.toggle("is-lady",m==="lady");fw.classList.toggle("is-sponsor",m==="sponsor");$("#f-type").value=modes[m][0];$("#f-msg-label").textContent=modes[m][1];var t=$("#f-submit-t");if(t)t.textContent=modes[m][2];}
+$$(".tabs button",fw).forEach(function(b){b.addEventListener("click",function(){setMode(b.dataset.mode);});});
+document.addEventListener("click",function(e){var a=e.target.closest("[data-tab]");if(a&&$("#f-type")){setMode(a.dataset.tab);if(a.dataset.pkg)$("#f-package").value=a.dataset.pkg;}});
+form.addEventListener("submit",function(e){e.preventDefault();var err=$("#f-err");err.hidden=true;var name=$("#f-name").value.trim(),email=$("#f-email").value.trim();
+  if(!name||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent="Please enter your name and a valid email address.";err.hidden=false;return;}
+  if(!$("#f-age").checked){err.textContent="Please confirm you are 18 or older.";err.hidden=false;return;}
+  var esc=function(s){return s.replace(/[<>&"]/g,"");},done=function(){form.innerHTML='<div class="form-ok"><h4>Thank you, '+esc(name)+'.</h4><p>Our team will contact you personally at '+esc(email)+'. For anything urgent, call 1-877-677-7795.</p></div>';};
+  var ep=form.dataset.endpoint;if(ep){fetch(ep,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw 0;done();}).catch(function(){err.textContent="We couldn't send that just now. Please try again, or call 1-877-677-7795.";err.hidden=false;});}else done();});
+
+/* ---------- scrolling ---------- */
+var lenis=null;
+function goTo(sel){var t=sel==="#top"?0:document.querySelector(sel);if(t===null)return;if(lenis)lenis.scrollTo(t,{duration:1.6});else if(t===0)window.scrollTo({top:0});else t.scrollIntoView();}
+document.addEventListener("click",function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute("href");if(id.length<2)return;e.preventDefault();goTo(id);});
+
+/* ================= MOTION ================= */
+// statement words
+(function(){var st=$("#statement");var nodes=Array.prototype.slice.call(st.childNodes);st.innerHTML="";nodes.forEach(function(n){var target=st;if(n.nodeType!==3){var em=document.createElement("em");st.appendChild(em);target=em;n=document.createTextNode(n.textContent);}n.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t))target.appendChild(document.createTextNode(t));else{var s=document.createElement("span");s.className="w";s.textContent=t;target.appendChild(s);}});});})();
+
+var slides=$$(".slide"),idx=$("#expIdx");
+slides.forEach(function(s,i){var b=document.createElement("button");b.type="button";b.textContent=s.dataset.name;if(!i)b.classList.add("on");idx.appendChild(b);});
+var curSlide=-1;function activateSlide(i){if(i===curSlide)return;curSlide=i;slides.forEach(function(s,k){var v=$("video",s);if(v){if(k===i)playV(v);else if(Math.abs(k-i)>1)pauseV(v);else loadVideo(v);}});$$("button",idx).forEach(function(b,k){b.classList.toggle("on",k===i);});}
+
+if(!hasGsap||reduced){$(".loader").style.display="none";$$(".statement .w").forEach(function(w){w.style.opacity=1;});setNavTone();
+  // no motion: stack slides & options normally
+  $("#experiences").style.height="auto";slides.forEach(function(s){s.style.position="relative";s.style.height="100svh";var v=$("video",s);if(v)playV(v);});
+  $("#why").style.height="auto";$$(".otext").forEach(function(o){o.style.position="relative";o.style.opacity=1;o.style.visibility="visible";o.style.marginBottom="40px";});$("#optTexts").style.minHeight="0";
+  if(!hasGsap)return;}
+gsap.registerPlugin(ScrollTrigger);
+if(reduced)return;
+
+if(window.Lenis){lenis=new Lenis({duration:1.2,smoothWheel:true});window.__lenis=lenis;lenis.on("scroll",ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000);});gsap.ticker.lagSmoothing(0);}
+
+// intro
+var intro=gsap.timeline({defaults:{ease:"expo.out"},onComplete:setNavTone});
+intro.from(".loader__name span",{yPercent:110,duration:1.1})
+ .to(".loader__bar i",{scaleX:1,duration:1,ease:"power2.inOut"},"<.2")
+ .to(".loader__in",{opacity:0,y:-30,duration:.6,ease:"power2.in"},"+=.15")
+ .to(".loader",{clipPath:"inset(0 0 100% 0)",duration:1.2,ease:"expo.inOut"},"-=.1")
+ .set(".loader",{display:"none"})
+ .from("#heroMedia",{scale:1.25,duration:2.4,ease:"expo.out"},"-=1")
+ .from(".hero h1 .line > span",{yPercent:110,duration:1.5,stagger:.1},"-=2")
+ .from(".h-in",{y:30,opacity:0,duration:1.2,stagger:.1},"-=1.2")
+ .from(".nav",{opacity:0,duration:1,clearProps:"opacity"},"-=1.2");
+
+// hero parallax out
+gsap.to("#heroMedia",{yPercent:25,scale:1.1,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}});
+gsap.to(".hero__c",{yPercent:-20,opacity:0,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"80% top",scrub:true}});
+
+// DIVE: portal grows to full screen
+var dtl=gsap.timeline({scrollTrigger:{trigger:"#dive",start:"top top",end:"+=180%",scrub:1,pin:true,anticipatePin:1}});
+dtl.fromTo("#portal",{clipPath:"circle(9% at 50% 55%)"},{clipPath:"circle(75% at 50% 50%)",ease:"power2.in"},0)
+   .fromTo("#dive .media.top",{scale:1},{scale:1.35,ease:"none"},0)
+   .fromTo(".dive__t",{opacity:1,y:0},{opacity:0,y:-80,ease:"power1.in"},.45)
+   .fromTo("#portal .media",{scale:1.4},{scale:1,ease:"none"},0);
+
+// statement fill & counters
+gsap.to("#statement .w",{opacity:1,stagger:.06,ease:"none",scrollTrigger:{trigger:"#statement",start:"top 78%",end:"bottom 50%",scrub:true}});
+$$("[data-count]").forEach(function(el){var o={v:0};gsap.to(o,{v:100,duration:2.2,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 85%",once:true},onUpdate:function(){el.textContent=Math.round(o.v);}});});
+
+// generic reveals
+$$(".reveal").forEach(function(el){gsap.from(el,{y:50,opacity:0,duration:1.4,ease:"expo.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}});});
+$$(".h2:not(.reveal)").forEach(function(el){gsap.from(el,{y:50,opacity:0,duration:1.4,ease:"expo.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}});});
+
+// EXPERIENCES: pinned full-screen stack with clip reveals
+gsap.set(slides,{zIndex:function(i){return i+1;}});
+gsap.set(slides.slice(1),{clipPath:"inset(100% 0% 0% 0%)"});
+var etl=gsap.timeline({scrollTrigger:{trigger:"#experiences",start:"top top",end:function(){return "+="+(slides.length*window.innerHeight*1.0);},scrub:1,pin:true,anticipatePin:1,
+  onUpdate:function(s){activateSlide(Math.min(slides.length-1,Math.round(s.progress*(slides.length-1))));},onEnter:function(s){curSlide=-1;activateSlide(Math.min(slides.length-1,Math.round(s.progress*(slides.length-1))));},onLeave:function(){slides.forEach(function(s){var v=$("video",s);if(v)pauseV(v);});curSlide=-1;},onEnterBack:function(s){curSlide=-1;activateSlide(Math.min(slides.length-1,Math.round(s.progress*(slides.length-1))));},onLeaveBack:function(){slides.forEach(function(s){var v=$("video",s);if(v)pauseV(v);});curSlide=-1;}}});
+slides.forEach(function(s,i){if(!i)return;var prev=slides[i-1];
+  etl.to(s,{clipPath:"inset(0% 0% 0% 0%)",ease:"power2.inOut",duration:1},i-1)
+     .fromTo($(".media",s),{scale:1.3},{scale:1,ease:"power2.out",duration:1},i-1)
+     .to($(".media",prev),{scale:1.15,yPercent:-12,ease:"power2.in",duration:1},i-1)
+     .fromTo($$(".slide__c > div > *",s),{y:80,opacity:0},{y:0,opacity:1,stagger:.06,duration:.5,ease:"power3.out"},i-.45);});
+$$("button",idx).forEach(function(b,i){b.addEventListener("click",function(){var st=etl.scrollTrigger;var y=st.start+(st.end-st.start)*(i/(slides.length-1));if(lenis)lenis.scrollTo(y,{duration:1.4});else window.scrollTo(0,y);});});
+
+// OPTIONS: pinned, text + background cross-fade
+var otexts=$$(".otext"),obgs=$$("#optBg .media"),oc=$("#optCount span");
+var otl=gsap.timeline({scrollTrigger:{trigger:"#why",start:"top top",end:"+=300%",scrub:1,pin:true,anticipatePin:1,onUpdate:function(s){oc.textContent=Math.min(4,1+Math.floor(s.progress*3.999));}}});
+for(var k=1;k<4;k++){otl.to(otexts[k-1],{autoAlpha:0,y:-40,duration:.4},k-1+.3).fromTo(otexts[k],{autoAlpha:0,y:40},{autoAlpha:1,y:0,duration:.4},k-1+.6).to(obgs[k],{opacity:1,duration:.6},k-1+.3).fromTo($("img",obgs[k]),{scale:1.2},{scale:1,duration:1},k-1+.3);}
+otl.to({},{duration:.4});
+
+// about
+gsap.fromTo("#aboutPh",{yPercent:-8},{yPercent:8,ease:"none",scrollTrigger:{trigger:".about",start:"top bottom",end:"bottom top",scrub:true}});
+gsap.from(".about__media",{clipPath:"inset(20% 20% 20% 20%)",duration:1.8,ease:"expo.inOut",scrollTrigger:{trigger:".about__media",start:"top 80%",once:true}});
+
+// events horizontal
+var mm=gsap.matchMedia();
+mm.add("(min-width: 821px)",function(){var tr=$("#evTrack"),dist=function(){return Math.max(0,tr.scrollWidth-window.innerWidth);};
+  var htl=gsap.to(tr,{x:function(){return -dist();},ease:"none",scrollTrigger:{trigger:"#evPin",start:"bottom bottom",end:function(){return "+="+dist();},pin:"#events",scrub:1,invalidateOnRefresh:true,anticipatePin:1}});
+  $$(".evp .media img").forEach(function(im){gsap.fromTo(im,{xPercent:-8,scale:1.15},{xPercent:8,scale:1.15,ease:"none",scrollTrigger:{trigger:im.closest(".evp"),containerAnimation:htl,start:"left right",end:"right left",scrub:true}});});});
+mm.add("(max-width: 820px)",function(){$$(".evp").forEach(function(p){gsap.from(p,{clipPath:"inset(15% 10% 15% 10%)",duration:1.4,ease:"expo.inOut",scrollTrigger:{trigger:p,start:"top 85%",once:true}});});});
+
+// prize
+var amt=$("#prizeAmt"),pv={v:0};
+gsap.to(pv,{v:10000,duration:2.6,ease:"power3.out",scrollTrigger:{trigger:"#prize",start:"top 55%",once:true},onUpdate:function(){amt.textContent="$"+Math.round(pv.v).toLocaleString("en-US");}});
+gsap.from("#prize .media",{scale:1.3,ease:"none",scrollTrigger:{trigger:"#prize",start:"top bottom",end:"top top",scrub:true}});
+
+// invite media
+gsap.from(".invite__media",{clipPath:"inset(0 100% 0 0)",duration:1.8,ease:"expo.inOut",scrollTrigger:{trigger:".invite",start:"top 70%",once:true}});
+
+// pageant / villa parallax
+["#pageantPh","#villaPh"].forEach(function(s){gsap.fromTo(s,{yPercent:-10,scale:1.15},{yPercent:10,scale:1.15,ease:"none",scrollTrigger:{trigger:s.parentNode,start:"top bottom",end:"bottom top",scrub:true}});});
+
+// destinations autoplay only when visible
+ScrollTrigger.create({trigger:"#destinations",start:"top 60%",end:"bottom 40%",onToggle:function(s){destVisible=s.isActive;if(dTimer){if(destVisible)dTimer.play();else dTimer.pause();}}});
+gsap.fromTo($("img",$$(".dslide")[0]),{scale:1.18},{scale:1.04,duration:8,ease:"power1.out",scrollTrigger:{trigger:"#destinations",start:"top 80%",once:true}});
+restartDestTimer();
+
+// films & gallery
+gsap.from("#filmMain",{clipPath:"inset(10% 10% 10% 10%)",duration:1.6,ease:"expo.inOut",scrollTrigger:{trigger:"#filmMain",start:"top 85%",once:true}});
+ScrollTrigger.batch(".gi",{start:"top 95%",once:true,onEnter:function(b){gsap.from(b,{y:60,opacity:0,stagger:Math.min(.06,.5/b.length),duration:1.1,ease:"expo.out"});}});
+ScrollTrigger.batch(".fthumb",{start:"top 95%",once:true,onEnter:function(b){gsap.from(b,{y:40,opacity:0,stagger:.06,duration:1,ease:"expo.out"});}});
+
+// reserve
+gsap.from(".form",{y:80,opacity:0,duration:1.4,ease:"expo.out",scrollTrigger:{trigger:"#reserve",start:"top 60%",once:true}});
+gsap.from(".foot__big",{yPercent:40,opacity:0,duration:1.6,ease:"expo.out",scrollTrigger:{trigger:".foot",start:"top 85%",once:true}});
+
+window.addEventListener("load",function(){ScrollTrigger.refresh();setNavTone();});
+})();
+</script>
+</body>
+</html>
