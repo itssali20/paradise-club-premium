@@ -8,31 +8,31 @@
 <meta property="og:title" content="Paradise Club · Elite Vacations · Where Paradise Meets Romance">
 <meta property="og:description" content="The only vacation for singles in the world. Join us in Paradise.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1593836788196-9fd68e904906?auto=format&fit=crop&w=1200&h=630&q=80">
-<meta name="theme-color" content="#04252c">
+<meta name="theme-color" content="#070708">
 <link rel="icon" type="image/png" href="media/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://assets.mixkit.co">
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Manrope:wght@300;400;500;600&display=swap">
 <style>
-/* Layout: cinematic, full-bleed screens of sea and sun; quiet sand interludes between them; thin gold rules, light serif display, wide-tracked caps */
+/* Layout: cinematic full-bleed screens on near-black, champagne-gold rules and gradients, Bodoni display, wide-tracked Manrope caps */
 :root{
-  --ocean:#04252c;     /* deep water: overlays, dark panels */
-  --lagoon:#0f5c63;
-  --turq:#3cc7c1;      /* turquoise accent */
-  --sand:#f5f0e8;      /* interlude ground */
-  --shell:#fbf9f5;
-  --gold:#c6a76b;      /* fine rules, numerals */
-  --ink:#10262b;
-  --ink-2:#5b6b6d;
-  --white:#ffffff;
-  --line:rgba(16,38,43,.14);
-  --f-serif:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
-  --f-sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --ocean:#070708;     /* deepest black: overlays, menus, footer */
+  --lagoon:#d6b26a;    /* gold accent text */
+  --turq:#e3c47f;      /* champagne highlight */
+  --sand:#0c0c0f;      /* section ground */
+  --shell:#111114;     /* alternate section ground */
+  --gold:#c9a45c;      /* fine rules, numerals */
+  --ink:#f3ede2;       /* ivory text */
+  --ink-2:#a8a298;
+  --white:#16161b;
+  --line:rgba(255,255,255,.1);
+  --f-serif:"Bodoni Moda","Bodoni 72",Didot,"Times New Roman",serif;
+  --f-sans:"Manrope","Helvetica Neue",Arial,system-ui,sans-serif;
   --gutter:clamp(18px,4.5vw,72px);
   --ease:cubic-bezier(.7,0,.2,1);
-  color-scheme:light;
+  color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
 html.lenis,html.lenis body{height:auto}
@@ -41,7 +41,7 @@ body{margin:0;background:var(--sand);color:var(--ink);font:300 17px/1.7 var(--f-
 img,video{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
-::selection{background:var(--turq);color:#fff}
+::selection{background:var(--turq);color:#0b0b0d}
 :focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 main{overflow-x:clip}
 section{position:relative}
@@ -67,7 +67,7 @@ section{position:relative}
 .media{position:absolute;inset:0;overflow:hidden;background:radial-gradient(120% 80% at 70% 20%,#4fd1c9 0%,#159aa0 35%,#0b5d66 65%,#04252c 100%)}
 .media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .media.nf img{opacity:0}
-.shade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,37,44,.45) 0%,rgba(4,37,44,0) 30%,rgba(4,37,44,0) 55%,rgba(4,37,44,.75) 100%);pointer-events:none}
+.shade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.45) 0%,rgba(8,8,10,0) 30%,rgba(8,8,10,0) 55%,rgba(8,8,10,.75) 100%);pointer-events:none}
 .screen{min-height:100svh;color:#fff;overflow:hidden}
 .line{display:block;overflow:hidden}
 .line > span{display:block}
@@ -122,8 +122,8 @@ section{position:relative}
 .hero__c{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--gutter) clamp(30px,6vh,64px)}
 .hero__k{margin-bottom:26px;display:flex;align-items:center;gap:16px}
 .hero__k::before{content:"";width:40px;height:1px;background:var(--gold)}
-.hero.shade::after{background:linear-gradient(90deg,rgba(4,37,44,.62) 0%,rgba(4,37,44,.38) 40%,rgba(4,37,44,0) 70%),linear-gradient(180deg,rgba(4,37,44,.5) 0%,rgba(4,37,44,.1) 25%,rgba(4,37,44,.25) 50%,rgba(4,37,44,.85) 100%)}
-.hero__c{z-index:2;text-shadow:0 2px 24px rgba(4,37,44,.45),0 1px 3px rgba(4,37,44,.35)}
+.hero.shade::after{background:linear-gradient(90deg,rgba(8,8,10,.62) 0%,rgba(8,8,10,.38) 40%,rgba(8,8,10,0) 70%),linear-gradient(180deg,rgba(8,8,10,.5) 0%,rgba(8,8,10,.1) 25%,rgba(8,8,10,.25) 50%,rgba(8,8,10,.85) 100%)}
+.hero__c{z-index:2;text-shadow:0 2px 24px rgba(8,8,10,.45),0 1px 3px rgba(8,8,10,.35)}
 .hero h1{max-width:18ch;font-weight:400;font-size:clamp(2.6rem,min(8vw,11.5svh),8.6rem)}
 .hero__sub{max-width:54ch;margin:22px 0 0;font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.6}
 .hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-top:26px}
@@ -184,7 +184,7 @@ section{position:relative}
 .opt-bg{position:absolute;inset:0}
 .opt-bg .media{opacity:0}
 .opt-bg .media:first-child{opacity:1}
-.opt-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.88) 0%,rgba(4,37,44,.55) 50%,rgba(4,37,44,.2) 100%)}
+.opt-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.88) 0%,rgba(8,8,10,.55) 50%,rgba(8,8,10,.2) 100%)}
 .opts__c{position:absolute;inset:0;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding:110px var(--gutter) 60px;gap:40px}
 .opt-texts{position:relative;min-height:420px}
 .otext{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;visibility:hidden}
@@ -218,7 +218,7 @@ section{position:relative}
 .evp{position:relative;width:clamp(300px,34vw,560px);height:min(74svh,760px);flex:none;overflow:hidden;color:#fff}
 .evp .media img{transition:transform 1.6s var(--ease)}
 .evp:hover .media img{transform:scale(1.06)}
-.evp__c{position:absolute;inset:auto 0 0 0;padding:30px;z-index:2;background:linear-gradient(transparent,rgba(4,37,44,.85))}
+.evp__c{position:absolute;inset:auto 0 0 0;padding:30px;z-index:2;background:linear-gradient(transparent,rgba(8,8,10,.85))}
 .evp__c .caps{color:var(--gold)}
 .evp h3{font:300 clamp(2rem,3vw,2.8rem)/1.02 var(--f-serif);margin:12px 0 10px}
 .evp p{margin:0;font-size:.96rem;opacity:.9}
@@ -227,7 +227,7 @@ section{position:relative}
 
 /* competitions */
 .comps{position:relative;background:var(--ocean);color:#fff;overflow:hidden}
-.comps > .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,37,44,.6),rgba(4,37,44,.9))}
+.comps > .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.6),rgba(8,8,10,.9))}
 .comps__c{position:relative;z-index:2;padding:clamp(110px,12vw,170px) var(--gutter) clamp(80px,10vw,130px);text-align:center}
 .comps__c .lead{margin:0 auto;opacity:.92}
 .prize__amt{font:300 clamp(5rem,17vw,16rem)/.85 var(--f-serif);letter-spacing:-.04em;margin:18px 0 10px;font-variant-numeric:tabular-nums}
@@ -235,7 +235,7 @@ section{position:relative}
 .comp{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--lagoon)}
 .comp img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
 .comp:hover img{transform:scale(1.06)}
-.comp__b{position:absolute;inset:auto 0 0 0;padding:24px;background:linear-gradient(transparent,rgba(4,37,44,.94))}
+.comp__b{position:absolute;inset:auto 0 0 0;padding:24px;background:linear-gradient(transparent,rgba(8,8,10,.94))}
 .comp__b .caps{color:var(--gold)}
 .comp h3{font:300 clamp(1.7rem,2.2vw,2.3rem)/1.05 var(--f-serif);margin:10px 0 6px}
 .comp p{margin:0;font-size:.92rem;opacity:.9}
@@ -302,7 +302,7 @@ section{position:relative}
 
 /* pageant */
 .pageant{min-height:100svh;display:flex;align-items:center}
-.pageant .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.9),rgba(4,37,44,.55) 60%,rgba(4,37,44,.3))}
+.pageant .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.9),rgba(8,8,10,.55) 60%,rgba(8,8,10,.3))}
 .pageant__c{position:relative;z-index:2;width:100%;padding:clamp(110px,12vw,160px) var(--gutter);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,100px)}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
 .steps li{display:grid;grid-template-columns:60px minmax(0,1fr);gap:18px;padding:24px 0;border-top:1px solid rgba(255,255,255,.22)}
@@ -318,7 +318,7 @@ section{position:relative}
 .dest{height:100svh;min-height:640px;background:var(--ocean)}
 .dslide{position:absolute;inset:0;opacity:0;visibility:hidden}
 .dslide.on{opacity:1;visibility:visible}
-.dslide .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.82) 0%,rgba(4,37,44,.35) 55%,rgba(4,37,44,.1) 100%)}
+.dslide .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.82) 0%,rgba(8,8,10,.35) 55%,rgba(8,8,10,.1) 100%)}
 .dest__c{position:absolute;inset:0;z-index:3;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);padding:120px var(--gutter) 50px;gap:40px;color:#fff;pointer-events:none}
 .dest__c > *{pointer-events:auto}
 .dest__txt{align-self:end}
@@ -360,7 +360,7 @@ section{position:relative}
 .film-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
 .film-main:hover img{transform:scale(1.04)}
 .film-main.nf img{opacity:0}
-.film-main::after{content:"";position:absolute;inset:0;background:rgba(4,37,44,.3)}
+.film-main::after{content:"";position:absolute;inset:0;background:rgba(8,8,10,.3)}
 .play{position:absolute;left:50%;top:50%;z-index:2;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:50%;border:1px solid rgba(255,255,255,.7);display:grid;place-items:center;font:400 .62rem/1 var(--f-sans);letter-spacing:.3em;text-transform:uppercase;transition:transform .6s var(--ease),background .6s}
 .film-main:hover .play{transform:scale(1.1);background:rgba(255,255,255,.12)}
 .film-label{position:absolute;left:30px;bottom:24px;z-index:2}
@@ -374,7 +374,7 @@ section{position:relative}
 .fthumb:hover img{transform:scale(1.07)}
 .fthumb::before{content:"\25B6";position:absolute;right:14px;bottom:10px;z-index:2;font-size:.8rem;color:#fff;opacity:.85}
 .fthumb span{position:absolute;left:14px;bottom:12px;z-index:2;font:400 .6rem/1 var(--f-sans);letter-spacing:.26em;text-transform:uppercase}
-.fthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(4,37,44,.7))}
+.fthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(8,8,10,.7))}
 @media (max-width:860px){.film-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.film-main{aspect-ratio:16/10}}
 
 /* gallery */
@@ -392,7 +392,7 @@ section{position:relative}
 .gi.hide{display:none}
 
 /* lightbox */
-.lb{position:fixed;inset:0;z-index:200;background:rgba(4,37,44,.97);color:#fff;display:grid;grid-template-rows:auto minmax(0,1fr) auto;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(8,8,10,.97);color:#fff;display:grid;grid-template-rows:auto minmax(0,1fr) auto;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
 .lb.open{opacity:1;visibility:visible}
 .lb__top{display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) var(--gutter) 18px}
 .lb__stage{display:grid;place-items:center;padding:0 var(--gutter);min-height:0}
@@ -405,7 +405,7 @@ section{position:relative}
 
 /* reserve */
 .reserve{min-height:100svh;display:flex;align-items:center}
-.reserve .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,37,44,.82),rgba(4,37,44,.45))}
+.reserve .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.82),rgba(8,8,10,.45))}
 .reserve__c{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,100px);padding:clamp(110px,12vw,160px) var(--gutter);align-items:center}
 .phone{display:block;font:300 clamp(2.2rem,4vw,3.4rem)/1 var(--f-serif);text-decoration:none;margin-top:10px}
 .form{background:rgba(245,240,232,.96);color:var(--ink);padding:clamp(26px,4vw,48px)}
@@ -439,6 +439,46 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 .foot__row nav{display:flex;gap:22px;flex-wrap:wrap}
 .foot__row a{text-decoration:none}
 .foot__row a:hover{color:var(--gold)}
+
+/* ===== premium theme ===== */
+body{font:400 16px/1.75 var(--f-sans);letter-spacing:.005em}
+.caps{font:500 .68rem/1.5 var(--f-sans);letter-spacing:.3em}
+.display{font-weight:400;letter-spacing:-.015em}
+.h2{font:400 clamp(2.1rem,4.8vw,4.8rem)/1.05 var(--f-serif);letter-spacing:-.01em}
+.statement{font:400 clamp(1.7rem,3.4vw,3.3rem)/1.18 var(--f-serif)}
+.gold,.h2 em,.statement em,.foot__big,.prize__amt{background:linear-gradient(100deg,#a8792f 0%,#f4dfa4 38%,#c9a45c 62%,#f1d999 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{font:600 .66rem/1 var(--f-sans);letter-spacing:.28em;padding:1.3em 2.4em}
+.btn--turq{background:linear-gradient(100deg,#b88a3e,#ecd394 50%,#c39a50);border-color:transparent;color:#0b0b0d}
+.btn--turq::before{background:#fff}
+.btn--dark{border-color:rgba(255,255,255,.32)}
+.btn--dark:hover{color:#0b0b0d}
+.btn--light{border-color:rgba(255,255,255,.45)}
+.media,.film-main{background:radial-gradient(120% 80% at 70% 20%,#2b2416 0%,#141210 45%,#09090b 100%)}
+.interlude,.how,.itin{background:radial-gradient(70% 60% at 92% 0%,rgba(201,164,92,.09),transparent 70%),var(--sand)}
+.about,.acts,.gallery,.pk,.invite{background:var(--shell)}
+.pk__item{background:#16161b;border:1px solid var(--line)}
+.nav.solid{background:rgba(8,8,10,.78);color:var(--ink);border-bottom:1px solid rgba(201,164,92,.16)}
+.villa__panel{background:rgba(10,10,12,.84);color:var(--ink);border:1px solid rgba(201,164,92,.25)}
+.form{background:rgba(12,12,15,.9);color:var(--ink);border:1px solid rgba(201,164,92,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.f input,.f select,.f textarea{border-bottom-color:rgba(255,255,255,.22);color:var(--ink)}
+.f select option{background:#111;color:#eee}
+.gi{background:#16161a}
+.loader,.menu,.foot{background:#060607}
+.lb{background:rgba(6,6,7,.97)}
+.slide h3,.dest__name{font-weight:400}
+/* hero */
+.hero.shade::after{background:radial-gradient(85% 70% at 50% 45%,rgba(8,8,10,.2),rgba(8,8,10,.62) 85%),linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.05) 28%,rgba(8,8,10,.12) 60%,rgba(8,8,10,.94) 100%)}
+.hero__c{align-items:center;justify-content:center;text-align:center;padding:110px var(--gutter) clamp(150px,22vh,200px);text-shadow:0 2px 30px rgba(0,0,0,.45)}
+.hero__mark{width:clamp(78px,8vw,116px);height:auto;margin:0 auto 18px;filter:drop-shadow(0 6px 26px rgba(0,0,0,.55))}
+.hero__k{justify-content:center;margin-bottom:22px}
+.hero__k::after{content:"";width:40px;height:1px;background:var(--gold)}
+.hero h1{max-width:none;font-weight:400;font-size:clamp(2.8rem,min(7.6vw,11.5svh),8.4rem);line-height:.98}
+.hero h1 .line{padding-bottom:.07em}
+.hero__sub{margin:22px auto 0;max-width:50ch}
+.hero__cta{justify-content:center}
+.hero__bar{position:absolute;left:var(--gutter);right:var(--gutter);bottom:clamp(22px,4vh,40px);z-index:2;margin:0;border-top-color:rgba(201,164,92,.35);text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero__stats b{font-weight:400}
+@media (max-width:760px){.hero__c{padding-bottom:190px}.hero__bar .scroll-cue{display:none}.hero__stats{gap:12px 26px}.hero__stats b{font-size:1.75rem}}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 </style>
@@ -477,23 +517,24 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 
 <!-- HERO: full-screen turquoise video -->
 <section class="screen hero shade" id="hero">
-  <div class="media" id="heroMedia"><video data-src="media/hero.mp4" data-src-sm="media/hero-sm.mp4" poster="media/hero.jpg" muted loop playsinline autoplay preload="auto"></video></div>
+  <div class="media" id="heroMedia"><video data-src="media/hero-reel.mp4" data-src-sm="media/hero-reel-sm.mp4" poster="media/hero-reel.jpg" muted loop playsinline autoplay preload="auto"></video></div>
   <div class="hero__c">
-    <div class="hero__k caps h-in">100 extraordinary women · 100 successful men</div>
-    <h1 class="display" aria-label="One unforgettable paradise"><span class="line"><span>One unforgettable</span></span><span class="line"><span><em>paradise.</em></span></span></h1>
-    <p class="hero__sub h-in">Seven days. Six nights. An exclusive luxury resort. An international gathering of fascinating singles: luxury, excitement, friendship and romance.</p>
+    <img class="hero__mark h-in" src="media/logo-mark.png" alt="" width="116" height="80">
+    <div class="hero__k caps h-in">Elite Vacations · Where paradise meets romance</div>
+    <h1 class="display" aria-label="One unforgettable paradise"><span class="line"><span>One unforgettable</span></span><span class="line"><span><em class="gold">paradise</em></span></span></h1>
+    <p class="hero__sub h-in">100 extraordinary women. 100 successful men. Seven days and six nights at an exclusive luxury resort.</p>
     <div class="hero__cta h-in"><a class="btn btn--turq" href="#reserve" data-tab="member">Become a member</a><a class="btn btn--light" href="#destinations">Explore vacations</a><a class="hero__free caps" href="#ladies">Ladies attend free</a></div>
-    <div class="hero__bar h-in">
-      <div class="hero__stats"><div><b>100</b><span>Ladies</span></div><div><b>100</b><span>Gentlemen</span></div><div><b>7</b><span>Days · 6 nights</span></div><div><b>$40K</b><span>Competition prizes</span></div></div>
-      <div class="scroll-cue caps"><i></i>Scroll to dive in</div>
-    </div>
+  </div>
+  <div class="hero__bar h-in">
+    <div class="hero__stats"><div><b>100</b><span>Ladies</span></div><div><b>100</b><span>Gentlemen</span></div><div><b>7</b><span>Days · 6 nights</span></div><div><b>$40K</b><span>Competition prizes</span></div></div>
+    <div class="scroll-cue caps"><i></i>Scroll to discover</div>
   </div>
 </section>
 
 <!-- DIVE: portal into the sea -->
 <section class="dive" id="dive">
-  <div class="media top"><video data-mx="21279" muted loop playsinline preload="none"></video></div>
-  <div class="portal" id="portal"><div class="media"><video data-mx="1213" muted loop playsinline preload="none"></video></div></div>
+  <div class="media top"><video data-mx="1114" muted loop playsinline preload="none"></video></div>
+  <div class="portal" id="portal"><div class="media"><video data-mx="37021" muted loop playsinline preload="none"></video></div></div>
   <div class="dive__t"><span class="caps">Crystalline white sand · turquoise ocean</span><div class="display">Dive in.</div><p>Sunny beaches embellished with crystalline white sand, a turquoise ocean, and the company of elite international singles.</p></div>
 </section>
 
@@ -560,7 +601,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
     <p class="lead">in proposed first prizes: $10,000 to the winner of each competition. Judged on stage and on the beach at every Paradise Club location, and streamed live on YouTube and social media.</p>
     <div class="comp-grid">
       <article class="comp"><img src="media/comp-bikini.jpg" alt="Paradise Club model in a red bikini" loading="lazy"><div class="comp__b"><span class="caps">$10,000 first prize</span><h3>Bikini Contest</h3><p>On the beach, in front of the whole resort.</p></div></article>
-      <article class="comp"><img src="media/ev-miss-paradise.jpg" alt="Miss Paradise contestants on stage" loading="lazy"><div class="comp__b"><span class="caps">$10,000 first prize</span><h3>Miss Paradise Contest</h3><p>Our signature beauty pageant, crowned in front of all our guests.</p></div></article>
+      <article class="comp"><img src="https://images.unsplash.com/photo-1541554685626-8016b713c293?auto=format&fit=crop&w=900&q=80" alt="Woman placing a tiara on her head" loading="lazy"><div class="comp__b"><span class="caps">$10,000 first prize</span><h3>Miss Paradise Contest</h3><p>Our signature beauty pageant, crowned in front of all our guests.</p></div></article>
       <article class="comp"><img src="media/comp-lingerie.jpg" alt="Model in a dressing room" loading="lazy"><div class="comp__b"><span class="caps">$10,000 first prize</span><h3>Lingerie Fashion Contest</h3><p>A runway night of lingerie and evening fashion.</p></div></article>
       <article class="comp"><img src="https://images.unsplash.com/photo-1734421989465-47be92f9f126?auto=format&fit=crop&w=900&q=80" alt="Performers on stage" loading="lazy"><div class="comp__b"><span class="caps">$10,000 first prize</span><h3>International Talent Contest</h3><p>Singing and dancing, judged live on stage.</p></div></article>
     </div>
@@ -572,14 +613,11 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 <!-- EXPERIENCES: full-screen video stack -->
 <section class="exp" id="experiences">
   <span class="exp__tag caps">The experiences</span>
-  <div class="slide" data-name="Bikini contest"><div class="media shade"><video data-mx="1111" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">01 / 08</span><h3>The bikini <em>contest</em></h3><p>On the beach at every Paradise Club location, in front of the whole resort. $10,000 to the winner.</p></div></div></div>
-  <div class="slide" data-name="Pool parties"><div class="media shade"><video data-mx="36167" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">02 / 08</span><h3>Pool <em>parties</em></h3><p>Music, all-inclusive drinks and 200 elite international singles who came to meet each other.</p></div></div></div>
-  <div class="slide" data-name="Sunset cruise"><div class="media shade"><img data-un="1708246118417-86df0deb72dd" alt="Friends in swimwear on a yacht"></div><div class="slide__c"><div><span class="slide__n">03 / 08</span><h3>The sunset <em>cruise</em></h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></div></div>
-  <div class="slide" data-name="Latin dance night"><div class="media shade"><img data-un="1531747056595-07f6cbbe10ad" alt="Couple dancing at night"></div><div class="slide__c"><div><span class="slide__n">04 / 08</span><h3>Latin <em>dance night</em></h3><p>Tango, salsa and bachata with live music under the stars.</p></div></div></div>
-  <div class="slide" data-name="Jet skiing"><div class="media shade"><video data-mx="20399" data-poster="1505867798796-639ec7e8cdf5" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">05 / 08</span><h3>Jet <em>skiing</em></h3><p>Full speed over the turquoise. Kite-boarding and windsurfing on the trade winds, too.</p></div></div></div>
-  <div class="slide" data-name="Scuba diving"><div class="media shade"><video data-mx="48927" data-poster="1682687981907-170c006e3744" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">06 / 08</span><h3>Scuba <em>diving</em></h3><p>Cancún is home to the world's second-largest barrier reef. Dive the Caribbean, from Cancún to St Lucia's exquisite reefs.</p></div></div></div>
-  <div class="slide" data-name="Parasailing"><div class="media shade"><video data-mx="15646" data-poster="1505738313577-5357ff512f16" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">07 / 08</span><h3><em>Parasailing</em></h3><p>See the resort, the reef and the coastline from above.</p></div></div></div>
-  <div class="slide" data-name="Horseback riding"><div class="media shade"><video data-mx="46807" data-poster="1618066860737-df4d383c98c3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">08 / 08</span><h3>Horseback <em>at sunset</em></h3><p>Ride along the beach at golden hour, then join the Sunset Cruise.</p></div></div></div>
+  <div class="slide" data-name="Bikini contest"><div class="media shade"><video data-mx="24926" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">01 / 05</span><h3>The bikini <em>contest</em></h3><p>On the beach at every Paradise Club location, in front of the whole resort. $10,000 to the winner.</p></div></div></div>
+  <div class="slide" data-name="Pool parties"><div class="media shade"><video data-mx="40105" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">02 / 05</span><h3>Pool <em>parties</em></h3><p>Music, champagne and 200 elite international singles who came to meet each other.</p></div></div></div>
+  <div class="slide" data-name="Sunset cruise"><div class="media shade"><img data-un="1708246118417-86df0deb72dd" alt="Friends in swimwear on a yacht"></div><div class="slide__c"><div><span class="slide__n">03 / 05</span><h3>The sunset <em>cruise</em></h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></div></div>
+  <div class="slide" data-name="Latin dance night"><div class="media shade"><img data-un="1531747056595-07f6cbbe10ad" alt="Couple dancing at night"></div><div class="slide__c"><div><span class="slide__n">04 / 05</span><h3>Latin <em>dance night</em></h3><p>Tango, salsa and bachata with live music under the stars.</p></div></div></div>
+  <div class="slide" data-name="Horseback riding"><div class="media shade"><video data-mx="46807" data-poster="1618066860737-df4d383c98c3" muted loop playsinline preload="none"></video></div><div class="slide__c"><div><span class="slide__n">05 / 05</span><h3>Horseback <em>at sunset</em></h3><p>Ride along the beach at golden hour, then join the Sunset Cruise.</p></div></div></div>
   <div class="exp__idx" id="expIdx"></div>
 </section>
 
@@ -588,9 +626,9 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
   <span class="caps reveal" style="color:var(--gold)">Activities &amp; adventures</span>
   <h2 class="h2 reveal" style="margin-top:18px">Every day is <em>a new adventure</em></h2>
   <div class="acts__grid">
-    <div class="reveal"><div class="acts__img"><img src="media/act-water-ski.jpg" alt="Woman water skiing" loading="lazy"></div><h3>Ocean</h3><p>Water skiing, jet skiing, scuba diving, snorkeling, parasailing, sailing and sunset cruises.</p></div>
+    <div class="reveal"><div class="acts__img"><img src="https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80" alt="Jet ski on the ocean" loading="lazy"></div><h3>Ocean</h3><p>Water skiing, jet skiing, scuba diving, snorkeling, parasailing, sailing and sunset cruises.</p></div>
     <div class="reveal"><div class="acts__img"><img src="https://images.unsplash.com/photo-1634501087922-c01c76ed66d6?auto=format&fit=crop&w=900&q=80" alt="Beach volleyball" loading="lazy"></div><h3>Beach</h3><p>Volleyball, swimming, beach tournaments, organised games and excursions.</p></div>
-    <div class="reveal"><div class="acts__img"><img src="media/ev-nightclub.jpg" alt="Night club party" loading="lazy"></div><h3>Evenings</h3><p>Latin dance nights, live music, comedy, fashion shows, themed parties and awards.</p></div>
+    <div class="reveal"><div class="acts__img"><img src="https://images.unsplash.com/photo-1765870974078-6d38fc3d30dc?auto=format&fit=crop&w=900&q=80" alt="Two women in evening gowns" loading="lazy"></div><h3>Evenings</h3><p>Latin dance nights, live music, comedy, fashion shows, themed parties and awards.</p></div>
   </div>
   <p class="fine reveal">Which activities are included, optional or extra-cost depends on the destination and local operators, and is confirmed in your event program.</p>
 </section>
@@ -699,14 +737,14 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
   </div>
   <div class="ev-pin" id="evPin"><div class="ev-track" id="evTrack">
     <article class="evp"><div class="media"><img data-un="1575448913281-98e9e5d3f193" alt="Couple dancing tango"></div><span class="evp__n">I</span><div class="evp__c"><span class="caps">Latin dance night</span><h3>Tango Night</h3><p>Tango, salsa and bachata with live music under the stars.</p></div></article>
-    <article class="evp"><div class="media"><img src="media/ev-masquerade.jpg" alt="Woman in a carnival mask" loading="lazy"></div><span class="evp__n">II</span><div class="evp__c"><span class="caps">Themed parties</span><h3>Masquerade &amp; Costume Parties</h3><p>Masks, costumes and a different theme every night.</p></div></article>
-    <article class="evp"><div class="media"><img src="media/ev-nightclub.jpg" alt="Night club party" loading="lazy"></div><span class="evp__n">III</span><div class="evp__c"><span class="caps">After dark</span><h3>Nightclub Parties</h3><p>DJs, lights and dancing until the early hours.</p></div></article>
-    <article class="evp"><div class="media"><img src="media/ev-rock-band.jpg" alt="Band on stage" loading="lazy"></div><span class="evp__n">IV</span><div class="evp__c"><span class="caps">Live music</span><h3>Mystery Rock Band</h3><p>Live concerts on the resort stage.</p></div></article>
-    <article class="evp"><div class="media"><img src="media/ev-comedy.jpg" alt="Comedian in mime makeup" loading="lazy"></div><span class="evp__n">V</span><div class="evp__c"><span class="caps">Comedy</span><h3>Amateur Stand-up Comedy</h3><p>Guests and entertainers take the mic.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1592936824773-b4b9c880ac7a" alt="Woman in a gold masquerade mask"></div><span class="evp__n">II</span><div class="evp__c"><span class="caps">Themed parties</span><h3>Masquerade &amp; Costume Parties</h3><p>Masks, costumes and a different theme every night.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1708449530105-ea7d453a6f89" alt="Sparklers over a nightclub crowd"></div><span class="evp__n">III</span><div class="evp__c"><span class="caps">After dark</span><h3>Nightclub Parties</h3><p>DJs, lights and dancing until the early hours.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1499364615650-ec38552f4f34" alt="Band playing on a lit stage"></div><span class="evp__n">IV</span><div class="evp__c"><span class="caps">Live music</span><h3>Live Music</h3><p>Concerts and live bands on the resort stage.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1580188928585-0ef5c1a5c4dd" alt="Microphone in front of a red curtain"></div><span class="evp__n">V</span><div class="evp__c"><span class="caps">Comedy</span><h3>Amateur Stand-up Comedy</h3><p>Guests and entertainers take the mic.</p></div></article>
     <article class="evp"><div class="media"><img data-un="1762430815576-6b69de7a1f5f" alt="Model on a runway with an audience"></div><span class="evp__n">VI</span><div class="evp__c"><span class="caps">Broadcast on YouTube</span><h3>Fashion Shows</h3><p>Swimwear, beach and tropical fashion nights, staged at the resort.</p></div></article>
     <article class="evp"><div class="media"><img data-un="1552600337-6f42e4fb2e78" alt="Four women on a yacht"></div><span class="evp__n">VII</span><div class="evp__c"><span class="caps">Golden hour</span><h3>The Sunset Cruise</h3><p>Turquoise water, crystalline white sand on the horizon, and the company of elite international singles.</p></div></article>
     <article class="evp"><div class="media"><img data-un="1696668827476-8c99c513805c" alt="Woman jumping into a pool at a party"></div><span class="evp__n">VIII</span><div class="evp__c"><span class="caps">Every day</span><h3>Pool &amp; Beach Parties</h3><p>Music, drinks and 200 guests who came to meet each other.</p></div></article>
-    <article class="evp"><div class="media"><img data-un="1767962270437-a906d15d98f5" alt="Woman wearing a crown and sash"></div><span class="evp__n">IX</span><div class="evp__c"><span class="caps">The final night</span><h3>Awards &amp; Farewell</h3><p>The crowning of Miss Paradise, the competition winners and the farewell celebration.</p></div></article>
+    <article class="evp"><div class="media"><img data-un="1671541830281-1f2e4d10dfb1" alt="Gold crown"></div><span class="evp__n">IX</span><div class="evp__c"><span class="caps">The final night</span><h3>Awards &amp; Farewell</h3><p>The crowning of Miss Paradise, the competition winners and the farewell celebration.</p></div></article>
   </div></div>
 </section>
 
@@ -767,7 +805,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
   <span class="caps reveal" style="color:var(--gold)">Gallery</span>
-  <h2 class="h2 reveal" style="margin-top:18px">Fun stuff <em>has begun</em></h2>
+  <h2 class="h2 reveal" style="margin-top:18px">See the <em>experience</em></h2>
   <div class="filters" id="filters" role="group" aria-label="Filter gallery"></div>
   <div class="gal" id="gal"></div>
 </section>
@@ -803,7 +841,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px}
         <label class="check" for="f-age"><input type="checkbox" id="f-age" name="adult" required> I confirm I am 18 or older and agree to be contacted about Paradise Club.</label>
         <p class="privacy">Your details stay private. We use them only to reply to you and never share them.</p>
         <div style="grid-column:1/-1"><button class="btn btn--dark" type="submit"><span id="f-submit-t">Send application</span></button></div>
-        <p id="f-err" style="grid-column:1/-1;margin:0;color:#b3402a;font-size:.9rem" hidden></p>
+        <p id="f-err" style="grid-column:1/-1;margin:0;color:#ff8f7d;font-size:.9rem" hidden></p>
       </form>
     </div>
   </div>
@@ -845,6 +883,7 @@ $("#yr").textContent=new Date().getFullYear();
 function UN(id,w){return "https://images.unsplash.com/photo-"+id+"?auto=format&fit=crop&w="+(w||2000)+"&q=80";}
 function MX(id,q){return "https://assets.mixkit.co/videos/"+id+"/"+id+"-"+q+".mp4";}
 function WIX(id,w,h,ext,mode){ext=ext||"jpg";mode=mode||"fill";var f=id+"."+ext;return "https://static.wixstatic.com/media/8feb4d_"+f+"/v1/"+mode+"/w_"+w+",h_"+h+(mode==="fill"?",al_c":"")+",q_85/8feb4d_"+f;}
+function GS(x,w,h){if(x[0].indexOf("media/")===0)return x[0];if(x[0].indexOf("un:")===0)return UN(x[0].slice(3),w);return x[1]==="png"?WIX(x[0],w,w,"png","fit"):h?WIX(x[0],w,h):WIX(x[0],w,w,"jpg","fit");}
 function nf(el){var m=el.closest(".media,.gi,.fthumb,.film-main");if(m)m.classList.add("nf");}
 
 $$("img[data-un]").forEach(function(im){im.decoding="async";if(!im.closest(".hero"))im.loading="lazy";im.onerror=function(){nf(im);};im.src=UN(im.dataset.un,im.closest(".evp,.pk__img,.inset")?1200:2000);});
@@ -875,7 +914,7 @@ $$("#menuLinks a").forEach(function(a){a.addEventListener("click",function(){tog
 var D=[
  {n:"Cancún",r:"Mexico · Caribbean",img:"1602088113235-229c19758e9f",t:"A tropical paradise that remains one of the world's top destinations, with great weather, pumping nightlife and some of the coolest activities in Mexico. Home to the world's second-largest barrier reef, Cancún is ideal for scuba diving and snorkeling."},
  {n:"Playa del Carmen",r:"Mexico · Riviera Maya",img:"1640617547871-15e4fb41d0c5",t:"Just south of Cancún on the Riviera Maya: soft white-sand beaches, the lively Quinta Avenida, cenotes for swimming, and a short ferry to the reefs of Cozumel."},
- {n:"Bahamas",r:"Nassau · Caribbean",img:"media/dest-bahamas.jpg",t:"Mirages of powdery white sand against an indigo sea, and leaning palms rustling in the cooling trade breeze. Secluded, untouched beaches, and stunning beaches with activities galore within a sun-kissed arm's reach."},
+ {n:"Bahamas",r:"Nassau · Caribbean",img:"1559956144-83a135c9872e",t:"Mirages of powdery white sand against an indigo sea, and leaning palms rustling in the cooling trade breeze. Secluded, untouched beaches, and stunning beaches with activities galore within a sun-kissed arm's reach."},
  {n:"Jamaica",r:"Caribbean",img:"media/dest-jamaica.jpg",t:"One of the Caribbean's most iconic islands: rainforest, soaring mountains and dramatic coastlines. The scenery is breathtaking, the cuisine is scrumptious, the music is pulsating and the people are unforgettable."},
  {n:"St Lucia",r:"Eastern Caribbean",img:"1706645616928-1902d9a6b929",t:"Greeted by the Piton Mountains rising majestically from the surf, fringed by coral reefs and swaying palms. Exquisite reefs for divers and snorkelers, and trade winds for kite-boarding and windsurfing."},
  {n:"Dominican Republic",r:"Caribbean",img:"1705507972578-78537a2dda73",t:"Vast coral reefs, waterfalls, jungles and secluded islands. Raft the Río Yaque del Norte, then snorkel, dive, kayak, kite-board, sail and surf along the coast."},
@@ -889,7 +928,7 @@ var D=[
  {n:"Monaco",r:"Côte d'Azur",img:"1595138320174-a64d168e9970",t:"Pristine blue waters, warm weather and high rollers. Beautiful, chic, great weather and even better food."},
  {n:"Cannes",r:"Côte d'Azur · France",img:"1691770128504-d02718c998ae",t:"The glamour capital of the Riviera: La Croisette, golden beaches, yachts in the Old Port and the most famous red carpet in the world."},
  {n:"Barcelona",r:"Spain · Catalonia",img:"1599484233778-5bdc6b69bbe3",t:"Striking architecture, world-class museums and the rhythms of Catalonia. A beachside metropolis of tapas bars and Gaudí, from hillside parks to public buildings."},
- {n:"Málaga · Costa del Sol",r:"Spain · Andalusia",img:"media/dest-malaga.jpg",t:"Andalusia's city of culture, its 'mile of art' compared to Madrid and its dining to Barcelona, crowned by the 11th-century Gibralfaro castle above the Costa del Sol."},
+ {n:"Málaga · Costa del Sol",r:"Spain · Andalusia",img:"1512753360435-329c4535a9a7",t:"Andalusia's city of culture, its 'mile of art' compared to Madrid and its dining to Barcelona, crowned by the 11th-century Gibralfaro castle above the Costa del Sol."},
  {n:"Ibiza",r:"Balearic Islands · Spain",img:"1661887561486-1f771e7b2cab",t:"Turquoise coves, pine-covered cliffs and legendary sunsets, followed by the most famous nightlife in the Mediterranean."},
  {n:"Croatia",r:"Adriatic",img:"1593890349122-90a890752e10",t:"A thousand islands on the clearest water in Europe: the walls of Dubrovnik, the harbour of Hvar and secluded coves reachable only by boat."},
  {n:"Montenegro",r:"Adriatic",img:"1614122027743-50a9e6e8002f",t:"Mountains plunging into the Bay of Kotor, medieval towns on the water and the sandy beaches of the Budva Riviera."},
@@ -924,21 +963,15 @@ renderFilms();
 
 
 /* ---------- gallery (club's own photos from the Wix site) ---------- */
-var G=[["media/comp-bikini.jpg","jpg","Models",.75],["media/club-rain.jpg","jpg","Models",1.33],["media/ladies.jpg","jpg","Models",.75],["media/ev-miss-paradise.jpg","jpg","Events",1.23],["media/ev-masquerade.jpg","jpg","Events",.51],["media/ev-rock-band.jpg","jpg","Events",1.28],["media/act-water-ski.jpg","jpg","Activities",.9],["media/act-jet-ski.jpg","jpg","Activities",.51],["media/act-parasailing.jpg","jpg","Activities",.9],["media/act-wakeboard.jpg","jpg","Activities",1.75],["media/act-scuba.jpg","jpg","Activities",.9],["media/act-coral.jpg","jpg","Activities",.51],
- ["f98334123a6e5543dbcd694307e07894","jpg","Resort",1.5],["537a8090bf9c67a93abc4889f0fbdfc6","jpg","Resort",1.33],["f756054f64ae562045797743cf962659","jpg","Resort",1.33],["18c84fdcdc59c9ae8b0f0eaa7a81565e","jpg","Resort",1.6],["593cf5fe2d44f8fd7c41448cd0246bc1","jpg","Resort",2.1],
- ["9e538e887776df2dc0e5bbc25721b7b9","jpg","Destinations",1.85],["3582a78385243fde4620213d16aae98d","jpg","Destinations",1.33],["a8f3960d70a792e131180c8aa22e393f","jpg","Destinations",1.85],["8acf707f06d991f3ae5b70a4f08d2852","jpg","Destinations",1.33],["4a684b51fa0a72f83569017e9501e056","jpg","Destinations",1.85],["7a2edd402f3a2e3a0d0147a8d58ab6fe","jpg","Destinations",1.33],
- ["d28a508c8f3f93598b8bcb271c57ba7d","jpg","Events",1.85],["199db79aaab610022d370aa9e07dc735","jpg","Events",1.33],["fd9c9f4bec6bd98eb041367d70d791c6","jpg","Events",1.85],
- ["dc9feda3dd646abc000b4bc6d02df776","jpg","Activities",1.85],["594086839dc0c510902f7b34f8fb7b45","jpg","Activities",1.33],["368c2b2b4f9ab6411444a95b31f18606","jpg","Activities",1.85],["84e6262f6ae5fabc9af86bbcb73b6734","png","Activities",2],
- ["152a80b6d9b2627cb884fda36df6eb85","jpg","Models",1.5],["fe23ee8afddeee01f04f7e8aa96f2344","jpg","Models",.66],["89011149e3828beebdbde02de2386ec1","jpg","Models",.66],["3dbd6db4022573271d8c7c9b7799b192","jpg","Models",.62],["89b5ab1901599c64f2511619e604cbbb","jpg","Models",1.85],["a89f17aa5c523eed6ba60e064edeb1d1","png","Models",.49],
- ["f334cb24218641b35087659ecdb172a6","jpg","Moments",1.33],["3e135754fa5e4bea30d6bcd69a15daf3","jpg","Moments",.75],["041046d68a82892f0df839271e99c51f","jpg","Moments",1],["853875811352cfb5b7d57fd3f8f14469","jpg","Moments",1.5],["f06c920b7adea1a354840f1d6d91ad22","jpg","Moments",.8],["4ae82633fff41f2bcff665fdae2ec0c8","jpg","Moments",1.33],["dc8d79bd4258a90eaed73d1d489dbb52","jpg","Moments",.75],["9e884086ae88f9f9ec2ef5de7d0675b0","jpg","Moments",1],["d0838d1913c688deea9cee540a9bf59f","jpg","Moments",1.5],["8dd479c34b8bf77f0b5c85b842144e42","jpg","Moments",.8],["930dab0115d85a5c8d1024ebe5377299","jpg","Moments",1.33],["0c80c801b8fa75bde526c50fa61d51cf","jpg","Moments",.75],["9f0ff7cbc538c1c51fddb05110fe4c38","jpg","Moments",1],["9e1a0052df172b8f42b1646c4ec25896","jpg","Moments",1.5],["5ea1d5fa13341180db0d2ee209da9e7b","jpg","Moments",.8],["c17cba160f881a8d5d7bddc916661037","jpg","Moments",1.33],["290abd7319cb62e74a817728b2c0155e","jpg","Moments",.75],["d327ef663b816f656b8ca6791d465836","jpg","Moments",1],["499c10701d6496970fc0583372720649","jpg","Moments",1.5],["97c8631d677ff9c614bdf4441a0eafd5","jpg","Moments",.8],["1f35e4d16da68d7557063af9edb27f37","png","Moments",1],["27ce4f15619ba39a1973347adf1fabde","png","Moments",1]];
+var G=[["media/comp-bikini.jpg","jpg","Models",0.75],["un:1593836788196-9fd68e904906","jpg","Models",0.67],["media/club-rain.jpg","jpg","Models",1.33],["un:1708449530105-ea7d453a6f89","jpg","Nights",0.75],["media/ladies.jpg","jpg","Models",0.75],["un:1780631742225-053ddbd9a9ca","jpg","Resorts",1.5],["un:1765870974078-6d38fc3d30dc","jpg","Nights",0.75],["un:1749183563789-ae17d4a952d2","jpg","Nights",1.5],["un:1541554685626-8016b713c293","jpg","Models",0.75],["un:1596178067639-5c6e68aea6dc","jpg","Resorts",1.5],["un:1564633351631-e85bd59a91af","jpg","Adventure",0.75],["un:1592936824773-b4b9c880ac7a","jpg","Nights",0.75],["un:1590523277543-a94d2e4eb00b","jpg","Resorts",1.5],["un:1708246118417-86df0deb72dd","jpg","Adventure",1.5],["media/act-scuba.jpg","jpg","Adventure",0.9],["un:1543489822-c49534f3271f","jpg","Resorts",1.5],["un:1696668827476-8c99c513805c","jpg","Nights",0.75],["f334cb24218641b35087659ecdb172a6","jpg","Resorts",1.33],["3e135754fa5e4bea30d6bcd69a15daf3","jpg","Resorts",.75],["f06c920b7adea1a354840f1d6d91ad22","jpg","Resorts",.8],["dc8d79bd4258a90eaed73d1d489dbb52","jpg","Resorts",.75],["9f0ff7cbc538c1c51fddb05110fe4c38","jpg","Resorts",1],["5ea1d5fa13341180db0d2ee209da9e7b","jpg","Resorts",.8],["97c8631d677ff9c614bdf4441a0eafd5","jpg","Resorts",.8]];
 var gal=$("#gal"),filters=$("#filters");
-G.forEach(function(x,i){var b=document.createElement("button");b.type="button";b.className="gi"+(x[1]==="png"?" png":"");b.dataset.cat=x[2];b.setAttribute("aria-label","Open "+x[2]+" photo");var ph=document.createElement("div");ph.className="ph";ph.style.setProperty("--ar",x[3]);var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.loading="lazy";im.onerror=function(){b.classList.add("nf");};im.src=x[0].indexOf("media/")===0?x[0]:x[1]==="png"?WIX(x[0],600,600,"png","fit"):WIX(x[0],600,Math.round(600/x[3]));ph.appendChild(im);b.appendChild(ph);b.addEventListener("click",function(){openLB(i);});gal.appendChild(b);});
-["All","Resort","Destinations","Events","Activities","Models","Moments"].forEach(function(c,i){var b=document.createElement("button");b.type="button";b.setAttribute("aria-pressed",i?"false":"true");b.textContent=c;b.addEventListener("click",function(){$$("button",filters).forEach(function(z){z.setAttribute("aria-pressed","false");});b.setAttribute("aria-pressed","true");var items=$$(".gi",gal);items.forEach(function(it){it.classList.toggle("hide",c!=="All"&&it.dataset.cat!==c);});if(hasGsap&&!reduced)gsap.fromTo(items.filter(function(it){return !it.classList.contains("hide");}),{opacity:0,y:30},{opacity:1,y:0,stagger:.03,duration:.7,ease:"expo.out",onComplete:function(){if(window.ScrollTrigger)ScrollTrigger.refresh();}});});filters.appendChild(b);});
+G.forEach(function(x,i){var b=document.createElement("button");b.type="button";b.className="gi"+(x[1]==="png"?" png":"");b.dataset.cat=x[2];b.setAttribute("aria-label","Open "+x[2]+" photo");var ph=document.createElement("div");ph.className="ph";ph.style.setProperty("--ar",x[3]);var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.loading="lazy";im.onerror=function(){b.classList.add("nf");};im.src=GS(x,700,Math.round(700/x[3]));ph.appendChild(im);b.appendChild(ph);b.addEventListener("click",function(){openLB(i);});gal.appendChild(b);});
+["All","Models","Nights","Resorts","Adventure"].forEach(function(c,i){var b=document.createElement("button");b.type="button";b.setAttribute("aria-pressed",i?"false":"true");b.textContent=c;b.addEventListener("click",function(){$$("button",filters).forEach(function(z){z.setAttribute("aria-pressed","false");});b.setAttribute("aria-pressed","true");var items=$$(".gi",gal);items.forEach(function(it){it.classList.toggle("hide",c!=="All"&&it.dataset.cat!==c);});if(hasGsap&&!reduced)gsap.fromTo(items.filter(function(it){return !it.classList.contains("hide");}),{opacity:0,y:30},{opacity:1,y:0,stagger:.03,duration:.7,ease:"expo.out",onComplete:function(){if(window.ScrollTrigger)ScrollTrigger.refresh();}});});filters.appendChild(b);});
 
 /* ---------- lightbox ---------- */
 var lb=$("#lb"),stage=$("#lbStage"),lbIdx=0,lbMode="img",lastFocus=null;
 function lockScroll(on){document.documentElement.style.overflow=on?"hidden":"";if(window.__lenis){if(on)window.__lenis.stop();else window.__lenis.start();}}
-function showLB(i){lbIdx=(i+G.length)%G.length;var x=G[lbIdx];stage.innerHTML="";var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.onerror=function(){stage.innerHTML="<p>This photo is hosted on Wix and could not load here.</p>";};im.src=x[0].indexOf("media/")===0?x[0]:x[1]==="png"?WIX(x[0],1400,1400,"png","fit"):WIX(x[0],1900,1900,"jpg","fit");stage.appendChild(im);$("#lbCap").textContent=x[2]+" · "+(lbIdx+1)+" / "+G.length;if(hasGsap&&!reduced)gsap.fromTo(im,{opacity:0,scale:.97},{opacity:1,scale:1,duration:.7,ease:"expo.out"});}
+function showLB(i){lbIdx=(i+G.length)%G.length;var x=G[lbIdx];stage.innerHTML="";var im=new Image();im.alt="Paradise Club "+x[2].toLowerCase();im.onerror=function(){stage.innerHTML="<p>This photo is hosted on Wix and could not load here.</p>";};im.src=GS(x,1900);stage.appendChild(im);$("#lbCap").textContent=x[2]+" · "+(lbIdx+1)+" / "+G.length;if(hasGsap&&!reduced)gsap.fromTo(im,{opacity:0,scale:.97},{opacity:1,scale:1,duration:.7,ease:"expo.out"});}
 function openLB(i){lbMode="img";$("#lbNav").hidden=false;lastFocus=document.activeElement;showLB(i);lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
 function openLocal(src,label){lbMode="vid";$("#lbNav").hidden=true;lastFocus=document.activeElement;stage.innerHTML='<div class="frame"><video src="'+src+'" controls autoplay playsinline style="width:100%;height:100%"></video></div>';$("#lbCap").textContent=label;lb.classList.add("open");lockScroll(true);$("#lbClose").focus();}
 function closeLB(){lb.classList.remove("open");stage.innerHTML="";lockScroll(false);if(lastFocus)lastFocus.focus({preventScroll:true});}
@@ -949,7 +982,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(lb.class
 /* ---------- nav ---------- */
 var nav=$("#nav"),lastY=0;
 window.addEventListener("scroll",function(){var y=window.scrollY;nav.classList.toggle("hide",y>lastY+4&&y>300&&!body.classList.contains("menu-open"));if(y<lastY-4)nav.classList.remove("hide");lastY=y;},{passive:true});
-function setNavTone(){var y=window.innerHeight*.06,els=document.elementsFromPoint(window.innerWidth/2,y+40);var light=els.some(function(el){return el.matches&&el.matches(".interlude,.about,.pk,.safety,.gallery,.invite,.how,.acts,.itin");});nav.classList.toggle("solid",light);}
+function setNavTone(){nav.classList.toggle("solid",window.scrollY>window.innerHeight*.6&&!body.classList.contains("menu-open"));}
 window.addEventListener("scroll",setNavTone,{passive:true});
 
 /* ---------- form ---------- */
@@ -1000,7 +1033,7 @@ intro.from(".loader__name span",{yPercent:110,duration:1.1})
 
 // hero parallax out
 gsap.to("#heroMedia",{yPercent:25,scale:1.1,ease:"none",scrollTrigger:{trigger:"#hero",start:"top top",end:"bottom top",scrub:true}});
-gsap.to(".hero__c",{yPercent:-8,opacity:0,ease:"power1.in",scrollTrigger:{trigger:"#hero",start:"top top",end:"75% top",scrub:true}});
+gsap.to(".hero__c,.hero__bar",{yPercent:-8,opacity:0,ease:"power1.in",scrollTrigger:{trigger:"#hero",start:"top top",end:"75% top",scrub:true}});
 
 // DIVE: portal grows to full screen
 var dtl=gsap.timeline({scrollTrigger:{trigger:"#dive",start:"top top",end:"+=180%",scrub:1,pin:true,anticipatePin:1}});
